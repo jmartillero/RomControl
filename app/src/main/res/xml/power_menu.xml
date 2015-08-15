@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Advanced Power Menu Editor" />
+    <SwitchPreference
+        android:title="Airplane Mode"
+        android:key="power_airplane_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Power Off"
+        android:key="Power_Off"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Restart"
+        android:key="Restart"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Emergency Mode"
+        android:key="power_emergency_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Screenshot"
+        android:key="power_screenshot_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Screen Record"
+        android:key="power_record_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Data Mode"
+        android:key="power_data_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Sound Mode"
+        android:key="power_sound_toggle"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+</PreferenceScreen>

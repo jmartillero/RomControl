@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Status Bar Mods" />
+
+    <PreferenceScreen android:title="Battery Settings" android:summary="Show/Hide battery, battery porcentage and modify your 3minit battery style">
+        <PreferenceCategory android:title="Stock Battery Settings" />
+
+        <CheckBoxPreference
+            android:title="On/Off Stock Battery"
+            android:key="hide_battery"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <CheckBoxPreference
+                android:title="Percentage next to Battery"
+                android:key="display_battery_percentage"
+                android:defaultValue="true"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+
+        <CheckBoxPreference
+            android:title="Percentage inside Battery"
+            android:key="status_bar_show_battery_percent"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <PreferenceCategory android:title="3Minit Battery Settings" />
+            <CheckBoxPreference
+                android:title="Show/Hide 3Minit Battery"
+                android:key="minit_battery_visible"
+                android:defaultValue="true"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+
+            <Preference android:title="3Minit Battery Mod"
+                android:summary="Choose your favorite battery icon from Gary Harrington's app">
+                <intent android:targetPackage="com.three.minit.minitbatterysettings.free" android:action="android.intent.action.MAIN" android:targetClass="com.three.minit.minitbatterysettings.MainActivity" />
+            </Preference>
+
+    </PreferenceScreen>
+
+    <Preference android:title="Clock Mods" android:summary="Customize your Clock style, Date Style, Hide them, Colorize, and more with Potato Clock">
+        <intent android:targetPackage="com.potato.clock.main"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.potato.clock.main.Main" />
+    </Preference>
+
+    <PreferenceScreen android:title="Network Speed Indicator" android:summary="Show/Hide Speed indicator, colorize, and more">
+        <PreferenceCategory android:title="Network Speed Indicator">
+            <CheckBoxPreference
+                android:title="Enable single line network speed"
+                android:key="db_pen_hovering_fenghenztlws_ink_effect"
+                android:defaultValue="false"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+            <ListPreference
+                android:entries="@array/kill_app_entries"
+                android:title="Network Speed refresh rate"
+                android:key="db_inkeffect_fenghenztlwssxsl_picker"
+                android:summary="%s"
+                android:defaultValue="500"
+                android:entryValues="@array/kill_app_values" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                android:title="Network Speed color"
+                android:key="db_inkeffect_fenghenztlwsys_picker"
+                android:summary="Custom network speed color"
+                android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+
+            <CheckBoxPreference
+                android:title="Enable dual line Network Speed"
+                android:key="db_pen_hovering_fenghenztlshws_ink_effect"
+                android:defaultValue="false"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+
+            <ListPreference
+                android:entries="@array/kill_app_entries"
+                android:title="Network Speed refresh rate"
+                android:key="db_inkeffect_fenghenztlshwssxsl_picker"
+                android:summary="%s"
+                android:defaultValue="500"
+                android:entryValues="@array/kill_app_values" />
+        </PreferenceCategory>
+
+    </PreferenceScreen>
+
+
+    <PreferenceScreen android:title="Network Speed Indicator (Other Style)"
+        android:summary="Network traffic settings, Show/hide, colorize, dual view, single view, autohide and more">
+        <PreferenceCategory android:title="Network Speed Indicator (Other Style)"/>
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Network Speed Color"
+        android:key="network_traffic_color"
+        android:summary="Color of network speed text" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/traffic_entries"
+        android:title="Traffic Meter Type"
+        android:key="network_traffic_state"
+        android:summary="%s"
+        android:entryValues="@array/traffic_values" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/traffic_update_entries"
+        android:title="Meter Update Frequency"
+        android:key="network_traffic_period" android:summary="%s"
+        android:entryValues="@array/traffic_update_values" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/traffic_unit_entries"
+        android:title="Display Unit"
+        android:key="network_traffic_unit"
+        android:summary="%s"
+        android:entryValues="@array/traffic_unit_values" />
+
+    <SwitchPreference
+        android:title="Autohide Meter"
+        android:key="network_traffic_autohide"
+        android:summaryOn="Network traffic will autohide"
+        android:summaryOff="Network traffic always shown" />
+
+    <com.martillero.romcontrol.prefs.SeekBarPreference
+        android:max="100"
+        android:title="Autohide Threshold"
+        android:key="network_traffic_autohide_threshold"
+        android:dependency="network_traffic_autohide" />
+</PreferenceScreen>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/signal_icons"
+        android:title="Signal Icon Changer"
+        android:key="signal_bars"
+        android:summary="Select different styles of signal icons"
+        android:entryValues="@array/signal_values" />
+
+    <PreferenceScreen
+        android:title="Operator"
+        android:summary="Show/Hide Operator, Change it, Colorize, and more">
+
+        <PreferenceCategory
+            android:title="Custom Operator Mod">
+            <CheckBoxPreference
+                android:title="Custom Operator"
+                android:key="db_dormant_fenghenztlyys_icon"
+                android:defaultValue="false"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                android:title="Custom Operator Text color"
+                android:key="db_dormant_fenghenztlyysys_icon"
+                android:summary="Choose any color from color picker"
+                android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+
+            <com.martillero.romcontrol.prefs.MyEditTextPreference
+                android:key="db_dormant_fenghenztlwb_icon"
+                android:title="Set Custom Operator Text"
+                android:dialogTitle="Set your Text" />
+
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceCategory android:title="Hide SystemUI icons form StatusBar">
+        <SwitchPreference
+            android:title="Set Bluetooth Visibility"
+            android:key="statusbar_hide_bluetooth"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <SwitchPreference
+            android:title="Set Alarm Visibility"
+            android:key="statusbar_hide_alarm"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Virtual Recent + Home + Lock button">
+        <CheckBoxPreference
+            android:title="Recent app button left corner"
+            android:key="db_dormant_fenghenztlxnh_icon"
+            android:defaultValue="false"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <CheckBoxPreference
+            android:title="Home button in the middle"
+            android:key="db_dormant_fenghenztlxni_icon"
+            android:defaultValue="false"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <CheckBoxPreference
+            android:title="Screen lock button right corner"
+            android:key="db_dormant_fenghenztlsjsp_icon"
+            android:defaultValue="false"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Key Shortcuts"/>
+
+    <CheckBoxPreference
+        android:title="Double Home Shortcut"
+        android:key="double_tab_launch"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.IntentDialogPreference
+        android:key="double_tab_launch_component"
+        android:title="Double Home Custom App"
+        android:dialogTitle="Reboot is required for changes to take effect"
+        android:summary="Choose your Custom App"/>
+
+   <PreferenceCategory android:title="DropDown Panel"/>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/martillero_toggle_entries"
+            android:title="Number of Toggles on Panel - Columns"
+            android:key="personalization_notificational_panel_single_quick_setting_button_number"
+            android:defaultValue="5"
+            android:entryValues="@array/martillero_toggle_values" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/toggle_scroll_entries"
+            android:title="Number of Scrollable Toggles"
+            android:key="notification_panel_active_number_of_apps"
+            android:defaultValue="10"
+            android:entryValues="@array/toggle_scroll_values" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/date_style_entries"
+        android:title="Dropdown Date Format"
+        android:key="dropdate_format"
+        android:summary="Choose style of date"
+        android:entryValues="@array/date_style_values" />
+
+    <com.martillero.romcontrol.prefs.MyEditTextPreference
+        android:title="Custom Dropdown Date"
+        android:hint="Type your custom text here"
+        android:key="custom_dropdate"
+        android:dialogTitle="Set Date Dropdown Text" />
+
+    <com.martillero.romcontrol.prefs.MyEditTextPreference
+        android:dialogTitle="Set Operator Dropdown text"
+        android:hint="Type your custom text here"
+        android:key="drop_carrier_label"
+        android:defaultValue="R-Control"
+        android:title="Custom Dropdown Operator" />
+
+    <PreferenceScreen android:title="CPU Stats" android:summary="Show Cpu and Governor in Dropdown Panel, next to clock">
+            <PreferenceCategory android:title="CPU Stats"/>
+            <CheckBoxPreference
+                android:title="Show CPU Info"
+                android:key="CPUSPYENABLE"
+                android:defaultValue="false"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+
+            <CheckBoxPreference
+                android:title="Show Governor next to CPU"
+                android:key="CPUSPYGOVERNOR"
+                android:defaultValue="false"
+                android:summaryOn="On"
+                android:summaryOff="Off" />
+    </PreferenceScreen>
+
+    <SwitchPreference
+        android:title="Memory cleaner"
+        android:key="pekaka_memCleanView"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Memory cleaner color"
+        android:key="db_inkeffect_pekaka_memkiller_picker"
+        android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+
+
+    <SwitchPreference
+        android:title="Custom Six Icons Panel Visibility"
+        android:key="quick_connect_toggle"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Notification Brightness Visibility"
+        android:key="pms_notification_panel_brightness_adjustment"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+</PreferenceScreen>

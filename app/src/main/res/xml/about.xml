@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:selectable="false"
+        android:layout="@layout/my_logo" >
+    </PreferenceScreen>
+    <PreferenceCategory android:title="Links" />
+
+    <PreferenceScreen
+        android:icon="@drawable/xda"
+        android:title="Aurora S6 Port (I9500)"
+        android:summary="Thread by Alemtro">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/galaxy-s4/i9500-develop/rom-aurora-s6-port-t3063408" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Norma S6 Port (I9500)"
+        android:summary="Thread by Alemtro"
+        android:icon="@drawable/xda">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://forum.xda-developers.com/galaxy-s4/i9500-develop/rom-norma-n4-s6-port-v10-t3099709" />
+        </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="DarkLord S6 Port (I9500)"
+        android:summary="Thread by Alemtro"
+        android:icon="@drawable/xda">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://forum.xda-developers.com/galaxy-s4/i9500-develop/rom-darklord-s6-v2-0-stable-fast-smooth-t3154469" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Darklord Official (N900X)"
+        android:summary="Thread by darkera13"
+        android:icon="@drawable/viet">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://samsungviet.vn/threads/rom-5-0-2-n900x-chip-snapdragon-only-darklord-s6-v2-0-stable-04-07-2015.4607/" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/weibo"
+        android:title="Official Aurora S6 Port (I9500)"
+        android:summary="Web by Aurora Team">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://weibo.com/AuroraROM" />
+    </PreferenceScreen>
+
+
+    <PreferenceCategory android:title="About ROM Control, Mods and Learning">
+        <PreferenceScreen
+            android:selectable="false"
+            android:summary="First of all, i want to say thanks to Wuby986 and Daxgirl, two super smart devs. This Rom Control\ncomes from them, from their source and from their guidance.\nHuge thanks also to: Goldie, tdunham, rompnit, kmokhtar79, remuntada78, mariozawa, txr33, thanhfhuongf, talkingmonkeys, and a lot more, THANKS TO ALL!\nSpecial thanks to all Aurora TEAM, darkera13, and Alemtro for all the work they do for us in XDA."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About the Add-on" />
+        <PreferenceScreen
+            android:title="by Martillero"
+            android:icon="?attr/marti"
+            android:selectable="false" />
+</PreferenceScreen>

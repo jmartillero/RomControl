@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="LockScreen Mods" />
+    <CheckBoxPreference
+        android:title="Quick Unlock"
+        android:key="lockscreen_quick_unlock_control"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <CheckBoxPreference
+        android:title="Pin Pad Scramble"
+        android:key="lockscreen_scramble_pin_layout"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <CheckBoxPreference
+        android:title="Lockscreen Sounds"
+        android:key="lockscreen_sounds_enabled"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Charging Dialog"
+        android:key="keyguard_charging_notif"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Low Battery Dialog"
+        android:key="keyguard_lowbattery_notif"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <PreferenceCategory android:title="Next Alarm on Lockscreen" />
+
+    <SwitchPreference
+        android:title="Next Alarm"
+        android:key="next_alarm"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Next Alarm Text Color"
+        android:key="next_alarm_color"
+        android:summary="Select color from Color Picker"
+        android:defaultValue="-1"
+        alphaSlider="true"
+        hexValue="true" />
+
+    <PreferenceCategory android:title="Device Info on Lockscreen and Dropdown" />
+
+    <SwitchPreference
+        android:title="Device Info"
+        android:key="device_info"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Device Info Header Color"
+        android:key="device_info_color"
+        android:summary="Select color from Color Picker"
+        android:defaultValue="-1"
+        alphaSlider="true" hexValue="true" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Device Info Info Color"
+        android:key="device_info_color2"
+        android:summary="Select color from Color Picker"
+        android:defaultValue="-1"
+        alphaSlider="true"
+        hexValue="true" />
+
+    <SwitchPreference
+        android:title="Camera shortcut in Lockscreen"
+        android:key="set_shortcuts_mode"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <PreferenceCategory android:title="LockScreen Hidden Effects (BE CAREFUL)" />
+    <PreferenceScreen
+        android:selectable="false"
+        android:summary="In the Effect Changer list below, some effects work well only with the original S4 Product Name on build prop. All effects should work well with original s4 Product Name (jag3xx), but you will loose the weather widget on Lockscreen.\nIf you use effects specifically for S4 with the S6 Product Name, you will face a delay for about 3/5 sec to unlock screen, or different system FC. The only effect that works perfect with both Product Names is Popping Colors."/>
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/lockscreen_entries"
+        android:title="Effect Changer"
+        android:key="lockscreen_ripple_effect"
+        android:summary="Try out different Lockscreen hidden effects, but be careful, some of them may be unstable"
+        android:dialogTitle="Lockscreen Changer"
+        android:entryValues="@array/lockscreen_values" />
+
+
+    <CheckBoxPreference
+        android:title="Random Ink Color"
+        android:key="random_ink"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Solid Ink Color"
+        android:key="db_inkeffect_picker"
+        android:summary="Custom Ink Color"
+        android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+
+    <PreferenceCategory android:title="Custom Operator on Lockscreen" />
+    <CheckBoxPreference
+        android:title="Custom Operator on Lockscreen"
+        android:key="my_lock_carrier"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.MyEditTextPreference
+        android:title="Custom Operator on Lockscreen"
+        android:key="my_lock_carrier_text"
+        android:summary="Edit Operator text"
+        android:dependency="my_lock_carrier"
+        android:dialogTitle="Set your Text" />
+
+</PreferenceScreen>

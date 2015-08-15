@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Phone and InCall UI Mods" />
+        <SwitchPreference
+            android:title="Increasing Ringtone"
+            android:key="db_inc_volume_disable"
+            android:defaultValue="false"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <PreferenceScreen
+            android:title="Install Stock Incall UI"
+            android:key="script#stockincallui"
+            android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+        <PreferenceScreen
+            android:title="Install FullScreen Incall UI (S5)"
+            android:key="script#fullincallui"
+            android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+    <PreferenceCategory android:title="For InCall UI Fullscreen Only" />
+
+        <SwitchPreference
+            android:title="Remove Last spoke"
+            android:key="last_spoke"
+            android:defaultValue="true"
+            android:summaryOn="Last Spoke is currently Off"
+            android:summaryOff="Last Spoke is currently On" />
+
+        <SwitchPreference
+            android:title="Remove Last message"
+            android:key="last_message"
+            android:defaultValue="true"
+            android:summaryOn="Last Message is currently Off"
+            android:summaryOff="Last Message is currently On" />
+</PreferenceScreen>

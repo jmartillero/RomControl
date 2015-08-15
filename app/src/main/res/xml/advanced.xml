@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Advanced Functions Menu" />
+
+    <PreferenceScreen
+        android:title="Device Network Info and Settings"
+        android:summary="Mobile Network and wifi Information and Settings"
+        android:icon="@drawable/network">
+        <intent android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.TestingSettings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Mobile USB mode settings"
+        android:summary="*#3424# Or *#0808# Function menu"
+        android:icon="@drawable/usb">
+        <intent android:targetPackage="com.sec.usbsettings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.sec.usbsettings.USBSettings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Phone APN Set-up"
+        android:summary="Configurations and Information on Phone Access Point"
+        android:icon="@drawable/apn">
+        <intent android:targetPackage="com.android.settings"
+            android:action="android.settings.APN_SETTINGS" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Battery Information and Calibration"
+        android:summary="Calibrate and get information about phone battery"
+        android:icon="@drawable/bateria">
+        <intent android:targetPackage="com.sec.android.app.factorykeystring"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.sec.android.app.status.BatteryStatus" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="GPS Satellite Viewer"
+        android:summary="Shows the satellites near your position, saved from agps data"
+        android:icon="@drawable/gps">
+        <intent android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.location.SatelliteView" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Diagnose Device Hardware issues"
+        android:summary="Test, diagnose and get device hardware information"
+        android:icon="@drawable/diagnos">
+        <intent android:targetPackage="com.sec.android.app.hwmoduletest"
+            android:action="android.provider.Telephony.SECRET_CODE"
+            android:targetClass="com.sec.android.app.hwmoduletest.HwModuleTest" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Usage Stats Activity"
+        android:summary="Shows a brief log of statics about the usage of your apps"
+        android:icon="@drawable/log">
+        <intent android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.UsageStatsActivity" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

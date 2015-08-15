@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\StudioProjects\Darklord\app\libs\RootTools.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5acf020c8db3eb87824b2f47949294732f04b019">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\RootTools-b3758c963889f2b9a5c398355d7a0b347ef7f826.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.github.shell-software\viewmover\1.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d065ab6e064a1398750b52b1108e52c6d5e77807">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-339f2ff85b97e57fdd4616470d64634fadca01dd.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-99c28846862fb4b0c6ae22babb58ab4525790711.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-fd8fabde81273098004a1ccc37c3e5f39f6fe35f.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-7db316da230cdb711010601afb5477876dcf1848.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-e6bd0df1eb1dba198fe6197589b359da53b14016.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cf52449fa39e6e61964c43f880ea827e0bcc8c9c">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-0670d488ffe109bb780c1cc5ec71ea867291ab2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Invitado 1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-e3ef2835b0c3b28beb31a0bb672adc888179bb71.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-7362c63c53d71d738ab055e852ed75cf642e1c90.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\libs\RootTools.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5acf020c8db3eb87824b2f47949294732f04b019">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\RootTools-d0c5e0b9eacbea1826d91fa2202bb3f113adfa82.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-eaad7ef778c81280f0ed0c5d7f701ff4c7d42726.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-3c59c7875690b862c747591d0c19736a945e0516.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.github.shell-software\viewmover\1.0.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d065ab6e064a1398750b52b1108e52c6d5e77807">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-87d825e6a31e7f46cba1b9aa6faa5895789ed214.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.github.shell-software\uitools\1.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="841420e749b01799d17bf0a83cc6eb64dd8fa136">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-ef647904b8cc95866ed967ae46850ea00a23f8ab.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-16ce2bdbe54b81a0b512223ab1f3650e1acc3cbe.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\Darklord\app\build\intermediates\exploded-aar\com.github.shell-software\uitools\1.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="841420e749b01799d17bf0a83cc6eb64dd8fa136">
+        <dex dex="C:\StudioProjects\Darklord\app\build\intermediates\pre-dexed\debug\classes-3745d32d3dde35a2797d96f801c86e293f624516.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\AuroraControl\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cf52449fa39e6e61964c43f880ea827e0bcc8c9c">
+        <dex dex="C:\StudioProjects\AuroraControl\app\build\intermediates\pre-dexed\debug\classes-4c68336ccbaad1389abb636a40e357064a8dd614.jar" />
+    </item>
+
+</items>
