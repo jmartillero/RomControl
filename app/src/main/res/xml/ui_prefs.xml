@@ -16,7 +16,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         <CheckBoxPreference
                 android:title="Percentage next to Battery"
                 android:key="display_battery_percentage"
-                android:defaultValue="true"
+                android:defaultValue="false"
                 android:summaryOn="On"
                 android:summaryOff="Off" />
 
@@ -31,7 +31,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             <CheckBoxPreference
                 android:title="Show/Hide 3Minit Battery"
                 android:key="minit_battery_visible"
-                android:defaultValue="true"
+                android:defaultValue="false"
                 android:summaryOn="On"
                 android:summaryOff="Off" />
 
@@ -39,6 +39,46 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:summary="Choose your favorite battery icon from Gary Harrington's app">
                 <intent android:targetPackage="com.three.minit.minitbatterysettings.free" android:action="android.intent.action.MAIN" android:targetClass="com.three.minit.minitbatterysettings.MainActivity" />
             </Preference>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="Battery Bar Settings" android:summary="Show/Hide battery bar, animate it, change color and style">
+        <PreferenceCategory android:title="Battery Bar" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/battery_bar_entries"
+            android:title="Battery Bar"
+            android:key="battery_bar"
+            android:summary="%s"
+            android:entryValues="@array/battery_bar_values" />
+
+        <SwitchPreference
+            android:title="Battery bar animation"
+            android:key="battery_bar_animate"
+            android:defaultValue="false"
+            android:summaryOn="Charging animation enabled"
+            android:summaryOff="Animation disabled" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/battery_bar_style_entries"
+            android:title="Battery bar style"
+            android:key="battery_bar_style"
+            android:summary="%s"
+            android:entryValues="@array/battery_bar_style_values" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/battery_bar_thickness_entries"
+            android:title="Thickness of battery bar"
+            android:key="battery_bar_thickness"
+            android:summary="%s"
+            android:entryValues="@array/battery_bar_thickness_values" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            android:title="Battery Bar Color"
+            android:key="battery_bar_color"
+            android:summary="Choose color of battery bar"
+            android:defaultValue="-4268032"
+            alphaSlider="true" hexValue="true"/>
 
     </PreferenceScreen>
 
@@ -56,7 +96,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:defaultValue="false"
                 android:summaryOn="On"
                 android:summaryOff="Off" />
-            <ListPreference
+            <com.martillero.romcontrol.prefs.MyListPreference
                 android:entries="@array/kill_app_entries"
                 android:title="Network Speed refresh rate"
                 android:key="db_inkeffect_fenghenztlwssxsl_picker"
@@ -76,7 +116,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
                 android:summaryOn="On"
                 android:summaryOff="Off" />
 
-            <ListPreference
+            <com.martillero.romcontrol.prefs.MyListPreference
                 android:entries="@array/kill_app_entries"
                 android:title="Network Speed refresh rate"
                 android:key="db_inkeffect_fenghenztlshwssxsl_picker"
@@ -94,7 +134,8 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         <com.martillero.romcontrol.prefs.ColorPickerPreference
         android:title="Network Speed Color"
         android:key="network_traffic_color"
-        android:summary="Color of network speed text" />
+        android:summary="Color of network speed text"
+        android:defaultValue="-1" alphaSlider="true" hexValue="true"/>
 
     <com.martillero.romcontrol.prefs.MyListPreference
         android:entries="@array/traffic_entries"
@@ -233,6 +274,13 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             android:defaultValue="10"
             android:entryValues="@array/toggle_scroll_values" />
 
+    <SwitchPreference
+        android:title="Toggles with Text on Dropdown"
+        android:key="toggle_text"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
     <com.martillero.romcontrol.prefs.MyListPreference
         android:entries="@array/date_style_entries"
         android:title="Dropdown Date Format"
@@ -258,14 +306,14 @@ xmlns:android="http://schemas.android.com/apk/res/android">
             <CheckBoxPreference
                 android:title="Show CPU Info"
                 android:key="CPUSPYENABLE"
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:summaryOn="On"
                 android:summaryOff="Off" />
 
             <CheckBoxPreference
                 android:title="Show Governor next to CPU"
                 android:key="CPUSPYGOVERNOR"
-                android:defaultValue="false"
+                android:defaultValue="true"
                 android:summaryOn="On"
                 android:summaryOff="Off" />
     </PreferenceScreen>
@@ -280,7 +328,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <com.martillero.romcontrol.prefs.ColorPickerPreference
         android:title="Memory cleaner color"
         android:key="db_inkeffect_pekaka_memkiller_picker"
-        android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        android:defaultValue="-3086080" alphaSlider="true" hexValue="true" />
 
 
     <SwitchPreference

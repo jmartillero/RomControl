@@ -67,14 +67,14 @@
         android:title="Device Info Header Color"
         android:key="device_info_color"
         android:summary="Select color from Color Picker"
-        android:defaultValue="-1"
+        android:defaultValue="-16606015"
         alphaSlider="true" hexValue="true" />
 
     <com.martillero.romcontrol.prefs.ColorPickerPreference
         android:title="Device Info Info Color"
         android:key="device_info_color2"
         android:summary="Select color from Color Picker"
-        android:defaultValue="-1"
+        android:defaultValue="-6300928"
         alphaSlider="true"
         hexValue="true" />
 
@@ -108,7 +108,7 @@
         android:title="Solid Ink Color"
         android:key="db_inkeffect_picker"
         android:summary="Custom Ink Color"
-        android:defaultValue="-1" alphaSlider="true" hexValue="true" />
+        android:defaultValue="-4849660" alphaSlider="true" hexValue="true" />
 
     <PreferenceCategory android:title="Custom Operator on Lockscreen" />
     <CheckBoxPreference
