@@ -56,7 +56,6 @@
         <item>General</item>
         <item>LockScreen</item>
         <item>Phone</item>
-        <item>Power Menu (Not available)</item>
         <item>Advanced Menu</item>
         <item>Useful Apps</item>
         <item>Set Theme</item>
@@ -104,8 +103,8 @@
     </string-array>
     <string-array name="signal_icons">
         <item>Stock</item>
-        <item>Bar</item>
-        <item>iPhone</item>
+        <item>Dots w Letters</item>
+        <item>Only Dots</item>
     </string-array>
 
     <string-array name="signal_values">
@@ -213,6 +212,23 @@
         <item>4 dp</item>
     </string-array>
     <string-array name="battery_bar_thickness_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="charge_effect_entries">
+        <item>No Effect (Text Only)</item>
+        <item>Seasonal</item>
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Autumn</item>
+        <item>Winter</item>
+    </string-array>
+    <string-array name="charge_effect_values">
+        <item>0</item>
+        <item>5</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

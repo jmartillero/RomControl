@@ -124,4 +124,13 @@
         android:dependency="my_lock_carrier"
         android:dialogTitle="Set your Text" />
 
+    <PreferenceCategory android:title="Charging Effects" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/charge_effect_entries"
+        android:title="Charging Effects"
+        android:key="festival_charging_effect"
+        android:summary="Activate and change between different seasonal charging effects"
+        android:dialogTitle="Charging Effects"
+        android:entryValues="@array/charge_effect_values" />
+
 </PreferenceScreen>

@@ -10,16 +10,16 @@
             android:summaryOff="Off" />
 
         <PreferenceScreen
-            android:title="Install Stock Incall UI"
+            android:title="Stock Incall UI"
             android:key="script#stockincallui"
             android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
 
         <PreferenceScreen
-            android:title="Install FullScreen Incall UI (S5)"
+            android:title="FullScreen S5 Incall UI (No FC in Incoming Calls)"
             android:key="script#fullincallui"
             android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
 
-    <PreferenceCategory android:title="For InCall UI Fullscreen Only" />
+    <PreferenceCategory android:title="For S5 InCall UI Fullscreen Only" />
 
         <SwitchPreference
             android:title="Remove Last spoke"

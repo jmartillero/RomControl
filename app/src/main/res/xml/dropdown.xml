@@ -39,7 +39,7 @@
         android:defaultValue="R-Control"
         android:title="Custom Dropdown Operator" />
 
-    <PreferenceScreen android:title="CPU Stats" android:summary="Show Cpu and Governor in Dropdown Panel, next to clock">
+    <PreferenceScreen android:title="CPU Stats" android:summary="Show Cpu and Governor in Dropdown Panel, above Date">
         <PreferenceCategory android:title="CPU Stats"/>
         <CheckBoxPreference
             android:title="Show CPU Info"
@@ -57,14 +57,14 @@
     </PreferenceScreen>
 
     <SwitchPreference
-        android:title="Memory cleaner"
+        android:title="Memory Cleaner"
         android:key="pekaka_memCleanView"
         android:defaultValue="false"
         android:summaryOn="On"
         android:summaryOff="Off" />
 
     <com.martillero.romcontrol.prefs.ColorPickerPreference
-        android:title="Memory cleaner color"
+        android:title="Memory Cleaner Color"
         android:key="db_inkeffect_pekaka_memkiller_picker"
         android:defaultValue="-3086080" alphaSlider="true" hexValue="true" />
 

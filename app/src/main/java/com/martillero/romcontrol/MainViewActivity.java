@@ -99,7 +99,6 @@ public class MainViewActivity extends AppCompatActivity
                 R.drawable.ic_general_framework,
                 R.drawable.ic_lockscreen,
                 R.drawable.ic_phone_mods,
-                R.drawable.ic_power_menu,
                 R.drawable.ic_advanced,
                 R.drawable.ic_apps,
                 R.drawable.ic_settings,
@@ -138,18 +137,15 @@ public class MainViewActivity extends AppCompatActivity
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PhonePrefsFragment()).commitAllowingStateLoss();
                 break;
             case 5:
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PowerMenuFragment()).commitAllowingStateLoss();
-                break;
-            case 6:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AdvancedFragment()).commitAllowingStateLoss();
                 break;
-            case 7:
+            case 6:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AppLinksFragment()).commitAllowingStateLoss();
                 break;
-            case 8:
+            case 7:
                 showThemeChooserDialog();
                 break;
-            case 9:
+            case 8:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AboutFragment()).commitAllowingStateLoss();
                 break;
 

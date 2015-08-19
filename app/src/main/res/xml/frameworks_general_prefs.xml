@@ -25,7 +25,7 @@
             <PreferenceCategory android:title="Signal and WiFi Position" />
 
             <PreferenceScreen
-                android:title="Signal stock Position"
+                android:title="Signal Stock Position"
                 android:key="script#signal_stock"
                 android:summary="Rom control will install it and reboot the UI\n[MANUAL REBOOT RECOMMENDED!]" />
 

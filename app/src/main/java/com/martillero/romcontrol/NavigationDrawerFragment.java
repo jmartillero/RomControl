@@ -156,7 +156,6 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
                 R.drawable.ic_general_framework,
                 R.drawable.ic_lockscreen,
                 R.drawable.ic_phone_mods,
-                R.drawable.ic_power_menu,
                 R.drawable.ic_advanced,
                 R.drawable.ic_apps,
                 R.drawable.ic_settings,
