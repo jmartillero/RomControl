@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
 xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Status Bar Mods" />
 
+    <PreferenceCategory android:title="Battery" />
     <PreferenceScreen android:title="Battery Settings" android:summary="Show/Hide battery, battery porcentage and modify your 3minit battery style">
         <PreferenceCategory android:title="Stock Battery Settings" />
 
@@ -42,6 +42,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
     </PreferenceScreen>
 
+    <PreferenceCategory android:title="Battery Bar" />
     <PreferenceScreen android:title="Battery Bar Settings" android:summary="Show/Hide battery bar, animate it, change color and style">
         <PreferenceCategory android:title="Battery Bar" />
 
@@ -82,12 +83,14 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 
     </PreferenceScreen>
 
+    <PreferenceCategory android:title="Clock" />
     <Preference android:title="Clock Mods" android:summary="Customize your Clock style, Date Style, Hide them, Colorize, and more with Potato Clock">
         <intent android:targetPackage="com.potato.clock.main"
             android:action="android.intent.action.MAIN"
             android:targetClass="com.potato.clock.main.Main" />
     </Preference>
 
+    <PreferenceCategory android:title="Traffic Meter" />
     <PreferenceScreen android:title="Network Speed Indicator" android:summary="Show/Hide Speed indicator, colorize, and more">
         <PreferenceCategory android:title="Network Speed Indicator">
             <CheckBoxPreference
@@ -170,6 +173,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:dependency="network_traffic_autohide" />
 </PreferenceScreen>
 
+    <PreferenceCategory android:title="Signal" />
     <com.martillero.romcontrol.prefs.MyListPreference
         android:entries="@array/signal_icons"
         android:title="Signal Icon Changer"
@@ -177,6 +181,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:summary="Select different styles of signal icons"
         android:entryValues="@array/signal_values" />
 
+    <PreferenceCategory android:title="Carrier" />
     <PreferenceScreen
         android:title="Operator"
         android:summary="Show/Hide Operator, Change it, Colorize, and more">
@@ -258,91 +263,5 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         android:dialogTitle="Reboot is required for changes to take effect"
         android:summary="Choose your Custom App"/>
 
-   <PreferenceCategory android:title="DropDown Panel"/>
-
-    <com.martillero.romcontrol.prefs.MyListPreference
-            android:entries="@array/martillero_toggle_entries"
-            android:title="Number of Toggles on Panel - Columns"
-            android:key="personalization_notificational_panel_single_quick_setting_button_number"
-            android:defaultValue="5"
-            android:entryValues="@array/martillero_toggle_values" />
-
-        <com.martillero.romcontrol.prefs.MyListPreference
-            android:entries="@array/toggle_scroll_entries"
-            android:title="Number of Scrollable Toggles"
-            android:key="notification_panel_active_number_of_apps"
-            android:defaultValue="10"
-            android:entryValues="@array/toggle_scroll_values" />
-
-    <SwitchPreference
-        android:title="Toggles with Text on Dropdown"
-        android:key="toggle_text"
-        android:defaultValue="false"
-        android:summaryOn="On"
-        android:summaryOff="Off" />
-
-    <com.martillero.romcontrol.prefs.MyListPreference
-        android:entries="@array/date_style_entries"
-        android:title="Dropdown Date Format"
-        android:key="dropdate_format"
-        android:summary="Choose style of date"
-        android:entryValues="@array/date_style_values" />
-
-    <com.martillero.romcontrol.prefs.MyEditTextPreference
-        android:title="Custom Dropdown Date"
-        android:hint="Type your custom text here"
-        android:key="custom_dropdate"
-        android:dialogTitle="Set Date Dropdown Text" />
-
-    <com.martillero.romcontrol.prefs.MyEditTextPreference
-        android:dialogTitle="Set Operator Dropdown text"
-        android:hint="Type your custom text here"
-        android:key="drop_carrier_label"
-        android:defaultValue="R-Control"
-        android:title="Custom Dropdown Operator" />
-
-    <PreferenceScreen android:title="CPU Stats" android:summary="Show Cpu and Governor in Dropdown Panel, next to clock">
-            <PreferenceCategory android:title="CPU Stats"/>
-            <CheckBoxPreference
-                android:title="Show CPU Info"
-                android:key="CPUSPYENABLE"
-                android:defaultValue="true"
-                android:summaryOn="On"
-                android:summaryOff="Off" />
-
-            <CheckBoxPreference
-                android:title="Show Governor next to CPU"
-                android:key="CPUSPYGOVERNOR"
-                android:defaultValue="true"
-                android:summaryOn="On"
-                android:summaryOff="Off" />
-    </PreferenceScreen>
-
-    <SwitchPreference
-        android:title="Memory cleaner"
-        android:key="pekaka_memCleanView"
-        android:defaultValue="false"
-        android:summaryOn="On"
-        android:summaryOff="Off" />
-
-    <com.martillero.romcontrol.prefs.ColorPickerPreference
-        android:title="Memory cleaner color"
-        android:key="db_inkeffect_pekaka_memkiller_picker"
-        android:defaultValue="-3086080" alphaSlider="true" hexValue="true" />
-
-
-    <SwitchPreference
-        android:title="Custom Six Icons Panel Visibility"
-        android:key="quick_connect_toggle"
-        android:defaultValue="true"
-        android:summaryOn="On"
-        android:summaryOff="Off" />
-
-    <SwitchPreference
-        android:title="Notification Brightness Visibility"
-        android:key="pms_notification_panel_brightness_adjustment"
-        android:defaultValue="true"
-        android:summaryOn="On"
-        android:summaryOff="Off" />
 
 </PreferenceScreen>

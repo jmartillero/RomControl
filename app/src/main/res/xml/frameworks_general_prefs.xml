@@ -18,6 +18,72 @@
         </PreferenceScreen>
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Signal and WiFi Position">
+        <PreferenceScreen android:title="SystemUI Position Changer"
+            android:summary="Choose between SystemUI Stock or Left Signal."
+            android:icon="?attr/signal">
+            <PreferenceCategory android:title="Signal and WiFi Position" />
+
+            <PreferenceScreen
+                android:title="Signal stock Position"
+                android:key="script#signal_stock"
+                android:summary="Rom control will install it and reboot the UI\n[MANUAL REBOOT RECOMMENDED!]" />
+
+            <PreferenceScreen
+                android:title="Signal Left Position (iPhone Style)"
+                android:key="script#signal_left"
+                android:summary="Rom control will install it and reboot the UI\n[MANUAL REBOOT RECOMMENDED!]" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Build.prop">
+        <PreferenceScreen android:title="Build.prop Changer Menu"
+            android:summary="Choose between different build.prop configs."
+            android:icon="?attr/build">
+            <PreferenceCategory android:title="Build.prop Changer Menu" />
+
+            <PreferenceScreen
+                android:title="S4 Product Name Build.prop"
+                android:key="script#s4_build"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+            <PreferenceScreen
+                android:title="S6 Product Name Build.prop"
+                android:key="script#s6_build"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+            <PreferenceScreen
+                android:title="S4 Product Name and MultiUser Support"
+                android:key="script#user_s4_build"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+            <PreferenceScreen
+                android:title="S6 Product Name and MultiUser Support"
+                android:key="script#user_s6_build"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="KeyLayout">
+        <PreferenceScreen android:title="KeyLayout Chooser Menu"
+            android:summary="Choose between S4 stock keylayout or s6 keylayout."
+            android:icon="?attr/keys">
+            <PreferenceCategory android:title="KeyLayout Chooser Menu" />
+
+            <PreferenceScreen
+                android:title="Activate S4 Keylayout"
+                android:key="script#s4_keys"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+
+            <PreferenceScreen
+                android:title="Activate S6 Keylayout"
+                android:key="script#s6_keys"
+                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
     <PreferenceCategory android:title="Emojis">
     <PreferenceScreen android:title="Emoji Changer Menu"
         android:summary="Choose between different Emoji Icons."
@@ -68,15 +134,21 @@
             android:summary="Choose between different Sound configurations."
             android:icon="?attr/audio">
         <PreferenceCategory android:title="Audio Gain Table Menu" />
+
         <PreferenceScreen
         android:title="Normal Sound Audio"
         android:key="script#normalsound"
         android:summary="Change you Audio configuration to 'Default'\n[Phone will reboot after press this option]" />
 
-    <PreferenceScreen
-        android:title="Louder Sound Audio"
+        <PreferenceScreen
+        android:title="High Sound Audio"
         android:key="script#loudersound"
-        android:summary="Change you Audio configuration to 'Louder'\n[Phone will reboot after press this option]" />
+        android:summary="Change you Audio configuration to 'High'\n[Phone will reboot after press this option]" />
+
+        <PreferenceScreen
+        android:title="Low Sound Audio"
+        android:key="script#lowsound"
+        android:summary="Change you Audio configuration to 'Low'\n[Phone will reboot after press this option]" />
         </PreferenceScreen>
     </PreferenceCategory>
 
@@ -118,53 +190,6 @@
                 android:summary="Reboot is required for changes to take effect" />
         </PreferenceScreen>
     </PreferenceCategory>
-
-    <PreferenceCategory android:title="KeyLayout">
-        <PreferenceScreen android:title="KeyLayout Chooser Menu"
-            android:summary="Choose between S4 stock keylayout or s6 keylayout."
-            android:icon="?attr/keys">
-            <PreferenceCategory android:title="KeyLayout Chooser Menu" />
-
-            <PreferenceScreen
-                android:title="Activate S4 Keylayout"
-                android:key="script#s4_keys"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-
-            <PreferenceScreen
-                android:title="Activate S6 Keylayout"
-                android:key="script#s6_keys"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-        </PreferenceScreen>
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="Build.prop">
-        <PreferenceScreen android:title="Build.prop Changer Menu"
-            android:summary="Choose between different build.prop configs."
-            android:icon="?attr/build">
-            <PreferenceCategory android:title="Build.prop Changer Menu" />
-
-            <PreferenceScreen
-                android:title="S4 Product Name Build.prop"
-                android:key="script#s4_build"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-
-            <PreferenceScreen
-                android:title="S6 Product Name Build.prop"
-                android:key="script#s6_build"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-
-            <PreferenceScreen
-                android:title="S4 Product Name and MultiUser Support"
-                android:key="script#user_s4_build"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-
-            <PreferenceScreen
-                android:title="S6 Product Name and MultiUser Support"
-                android:key="script#user_s6_build"
-                android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
-        </PreferenceScreen>
-    </PreferenceCategory>
-
 
 
 

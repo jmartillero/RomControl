@@ -20,4 +20,5 @@
     <attr name="keys" format="reference"/>
     <attr name="marti" format="reference"/>
     <attr name="build" format="reference"/>
+    <attr name="signal" format="reference"/>
 </resources>

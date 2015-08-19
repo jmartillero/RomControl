@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="DropDown Panel"/>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/martillero_toggle_entries"
+        android:title="Number of Toggles on Panel - Columns"
+        android:key="personalization_notificational_panel_single_quick_setting_button_number"
+        android:defaultValue="5"
+        android:entryValues="@array/martillero_toggle_values" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/toggle_scroll_entries"
+        android:title="Number of Scrollable Toggles"
+        android:key="notification_panel_active_number_of_apps"
+        android:defaultValue="10"
+        android:entryValues="@array/toggle_scroll_values" />
+
+    <SwitchPreference
+        android:title="Toggles with Text on Dropdown"
+        android:key="toggle_text"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/date_style_entries"
+        android:title="Dropdown Date Format"
+        android:key="dropdate_format"
+        android:summary="Choose style of date"
+        android:entryValues="@array/date_style_values" />
+
+    <com.martillero.romcontrol.prefs.MyEditTextPreference
+        android:dialogTitle="Set Operator Dropdown text"
+        android:hint="Type your custom text here"
+        android:key="drop_carrier_label"
+        android:defaultValue="R-Control"
+        android:title="Custom Dropdown Operator" />
+
+    <PreferenceScreen android:title="CPU Stats" android:summary="Show Cpu and Governor in Dropdown Panel, next to clock">
+        <PreferenceCategory android:title="CPU Stats"/>
+        <CheckBoxPreference
+            android:title="Show CPU Info"
+            android:key="CPUSPYENABLE"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+
+        <CheckBoxPreference
+            android:title="Show Governor next to CPU"
+            android:key="CPUSPYGOVERNOR"
+            android:defaultValue="true"
+            android:summaryOn="On"
+            android:summaryOff="Off" />
+    </PreferenceScreen>
+
+    <SwitchPreference
+        android:title="Memory cleaner"
+        android:key="pekaka_memCleanView"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Memory cleaner color"
+        android:key="db_inkeffect_pekaka_memkiller_picker"
+        android:defaultValue="-3086080" alphaSlider="true" hexValue="true" />
+
+
+    <SwitchPreference
+        android:title="Custom Six Icons Panel Visibility"
+        android:key="quick_connect_toggle"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <SwitchPreference
+        android:title="Notification Brightness Visibility"
+        android:key="pms_notification_panel_brightness_adjustment"
+        android:defaultValue="true"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+</PreferenceScreen>

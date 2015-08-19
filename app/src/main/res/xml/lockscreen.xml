@@ -118,7 +118,7 @@
         android:summaryOff="Off" />
 
     <com.martillero.romcontrol.prefs.MyEditTextPreference
-        android:title="Custom Operator on Lockscreen"
+        android:title="Type your Operator"
         android:key="my_lock_carrier_text"
         android:summary="Edit Operator text"
         android:dependency="my_lock_carrier"

@@ -8,7 +8,7 @@
         android:selectable="false"
         android:layout="@layout/my_logo" >
     </PreferenceScreen>
-    <PreferenceCategory android:title="Links" />
+    <PreferenceCategory android:title="Links (S6 Ports and relatives)" />
 
     <PreferenceScreen
         android:icon="@drawable/xda"

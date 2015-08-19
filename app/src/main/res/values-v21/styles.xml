@@ -24,6 +24,7 @@
         <item name="keys">@drawable/keys_dark</item>
         <item name="marti">@drawable/marti_dark</item>
         <item name="build">@drawable/build_dark</item>
+        <item name="signal">@drawable/signal_dark</item>
     </style>
     <style name="AppThemeLight" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
@@ -48,6 +49,7 @@
         <item name="keys">@drawable/keys_light</item>
         <item name="marti">@drawable/marti_light</item>
         <item name="build">@drawable/build_light</item>
+        <item name="signal">@drawable/signal_light</item>
     </style>
     <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance.Material" />
     <style name="Base.TextAppearance.AppCompat.Body1" parent="@android:style/TextAppearance.Material.Body1" />

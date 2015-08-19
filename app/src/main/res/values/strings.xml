@@ -51,11 +51,12 @@
         <item>10</item>
     </string-array>
     <string-array name="nav_drawer_items">
-        <item>SystemUI Mods</item>
-        <item>General Mods</item>
-        <item>LockScreen Mods</item>
-        <item>Phone Mods</item>
-        <item>Power Menu Editor</item>
+        <item>StatusBar</item>
+        <item>DropDown Panel</item>
+        <item>General</item>
+        <item>LockScreen</item>
+        <item>Phone</item>
+        <item>Power Menu (Not available)</item>
         <item>Advanced Menu</item>
         <item>Useful Apps</item>
         <item>Set Theme</item>
@@ -103,8 +104,8 @@
     </string-array>
     <string-array name="signal_icons">
         <item>Stock</item>
-        <item>Stock with 5 Bars</item>
-        <item>Stock with 6 Bars</item>
+        <item>Bar</item>
+        <item>iPhone</item>
     </string-array>
 
     <string-array name="signal_values">
@@ -180,8 +181,6 @@
         <item>01 Month - Year</item>
         <item>Day, 01 Month</item>
         <item>Short-Month 01, Day</item>
-        <item>Custom Date Text</item>
-        <item>Short-Day, 01 Month - Year</item>
     </string-array>
     <string-array name="date_style_values">
         <item>0</item>
@@ -189,8 +188,6 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
-        <item>5</item>
-        <item>6</item>
     </string-array>
 
     <string-array name="battery_bar_entries">
