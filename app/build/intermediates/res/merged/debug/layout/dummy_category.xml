@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="?attr/dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="1dp"
+            android:layout_marginStart="3.0dp"
+            android:layout_marginEnd="5.0dp"
+            android:textColor="?attr/circle_anim_color"
+            android:textAllCaps="false"
+            android:textSize="14sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:minHeight="1dp"
+        android:background="?android:attr/listDivider"/>
+
+</LinearLayout><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/layout/dummy_category.xml -->

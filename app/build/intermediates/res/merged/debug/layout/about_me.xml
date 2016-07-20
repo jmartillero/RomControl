@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:baselineAligned="true">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/aboutmepic"
+        android:src="@drawable/marti_dark"
+        android:tint="?attr/mynewColor"
+        android:layout_gravity="center|start"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aboutme"
+        android:text="Martillero"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="3dp"
+        android:textSize="18sp"
+        android:layout_toEndOf="@id/aboutmepic"
+        fontPath="fonts/JANA.ttf" />
+</RelativeLayout>
+<!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/layout/about_me.xml -->

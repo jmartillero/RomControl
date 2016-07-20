@@ -1,0 +1,9 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/googleDrawer"
+    style="@style/AppThemeLight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/nav_drawer_bg_color">
+
+</RelativeLayout>
+<!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/layout/fragment_navigation_drawer_light.xml -->

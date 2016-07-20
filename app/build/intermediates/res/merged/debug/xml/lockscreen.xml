@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/lock_mods" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="killprocess_quick_unlock"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/qunlock" />
+
+    <SwitchPreference
+        android:key="lockscreen_scramble_pin_layout"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Pin Pad Scramble" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="lockscreen_sounds_enabled"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/lock_sounds" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="hide_album_art"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Album Art on Lock" />
+
+    <SwitchPreference
+        android:key="lock_sys_icons"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Hide Right Lock Icons" />
+
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:defaultValue="false"
+        android:key="modcfg_arrows"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Shortcuts Arrows Animation" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="2"
+        android:entries="@array/lockscreen_notif_entries"
+        android:entryValues="@array/lockscreen_notif_values"
+        android:key="lockscreen_notifications"
+        android:title="@string/notif_lockscreen" />
+
+    <SwitchPreference
+        android:key="rotate_lockscreen"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/lock_rotate" />
+
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:defaultValue="false"
+        android:key="modcfg_noti_big"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Narrow notifications (S4 Style)" />
+
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:defaultValue="false"
+        android:key="modcfg_shorcut_effect"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Disable Shortcuts Preview" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Reboot Phone to update changes! ⇡⇡" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/next_alarm_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="next_alarm"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/next_alarm" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:dependency="next_alarm"
+        android:key="next_alarm_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/next_alarm_color" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/device_info_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="device_info"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/device_info" />
+
+    <PreferenceScreen
+        android:dependency="device_info"
+        android:summary="Configure device info text colors."
+        android:title="Device Info Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/device_info_title" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+        android:key="device_info_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/device_info_header_color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-12032"
+        android:key="device_info_color2"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/device_info_data_color" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/lock_clock_font_title" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:key="hide_digital_clocklock"
+        android:title="Digital/Analog Clock"
+        app:drawableArray="@array/clock_drawables"
+        app:entryList="@array/clock_style_entries"
+        app:entryValuesList="@array/clock_style_values" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="1"
+        android:entries="@array/lockscreen_clock_size_entries"
+        android:entryValues="@array/lockscreen_clock_size_values"
+        android:key="lock_screen_clock_size"
+        android:title="@string/clock_size" />
+
+    <SwitchPreference
+        android:key="custom_font_style_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Custom Font Style" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:dependency="custom_font_style_toggle"
+        android:entries="@array/lockscreen_font_style_entries"
+        android:entryValues="@array/lockscreen_font_style_values"
+        android:key="lockscreen_clock_font_style"
+        android:title="@string/clock_font" />
+
+    <SwitchPreference
+        android:key="lock_seconds"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Add Clock Seconds" />
+
+    <SwitchPreference
+        android:key="use_clock_theme"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Use Clock Images" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/lockscreen_clock_style_entries"
+        android:entryValues="@array/lockscreen_clock_style_values"
+        android:key="kg_center_clock"
+        android:title="LockScreen Clock Style" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Clock Colors" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="kg_clock_color"
+        android:title="Clock Color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="kg_clock_AMPM_color"
+        android:title="Am/Pm Color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="kg_date_color"
+        android:title="Date Color" />
+
+    <SwitchPreference
+        android:key="kg_clock_global_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Use same color for all elements" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="kg_clock_global_color"
+        android:title="Linked Color" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="LockScreen Elements" />
+
+    <PreferenceScreen
+        android:summary="Choose which elements you want visible or hidden."
+        android:title="@string/hide_lock_elements">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="LockScreen Elements" />
+        <SwitchPreference
+            android:defaultValue="true"
+        android:key="set_shortcuts_mode"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/cam_shortcut" />
+
+        <SwitchPreference
+        android:defaultValue="true"
+            android:key="set_shortcuts_phone"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/phone_shortcut" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_show_info"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/show_all_info" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_screen_date_and_year"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/date_lock" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_screen_show_clock"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/clock_lock" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_additional_info"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/weather_lock" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_additional_weather"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/Weather_widget" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="lock_additional_steps"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/SHealth_widget" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="unlock_text"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/swype_lock" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="keyguard_charging_notif"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/charge_lock" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="keyguard_lowbattery_notif"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/low_lock" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/lock_effect" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Effect Processor" />
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:key="modcfg_lock_effect"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Effect Processor Switch" />
+    <PreferenceCategory
+        android:layout="@layout/dummy_category"
+        android:title="Use this switch if you feel some lag on Lockscreen (some effects needs this switch on)\n\n⇡⇡ ¡Reboot UI to update changes! ⇡⇡" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:dialogTitle="Lockscreen Effect Changer"
+        android:entries="@array/lockscreen_entries"
+        android:entryValues="@array/lockscreen_values"
+        android:key="lockscreen_ripple_effect"
+        android:title="@string/efect_change" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Only for Ink Effect" />
+    <SwitchPreference
+        android:key="random_ink"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/random_ink" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-4849660"
+        android:key="db_inkeffect_picker"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/solid_ink" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/carrier_onlock" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="lock_screen_carrier"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/custom_carrier_title_lock" />
+
+    <PreferenceScreen
+        android:dependency="lock_screen_carrier"
+        android:title="Carrier Style Settings">
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/carrier_onlock" />
+    <com.martillero.romcontrol.prefs.MyEditTextPreference
+        android:defaultValue=""
+        android:dependency="lock_screen_carrier"
+        android:key="lock_screen_carrier_text"
+        android:summary="@string/Myedittext"
+        android:title="@string/custom_carrier_change" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="lock_screen_carrier"
+            android:key="lock_screen_carrier_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/custom_carrier_color" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="0"
+            unitsRight=" dp"
+            android:defaultValue="15"
+            android:dependency="lock_screen_carrier"
+            android:key="lock_screen_carrier_size"
+            android:max="25"
+            android:title="@string/lockscreen_operator_size" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Life Companion Message" />
+    <SwitchPreference
+        android:key="my_profile_enabled"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Life Companion" />
+
+    <PreferenceScreen
+        android:dependency="my_profile_enabled"
+        android:title="Life Companion Settings">
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:key="my_profile_text_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Companion Color" />
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="#00ffffff"
+            android:key="my_profile_background_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Companion BG Color" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="5"
+            unitsRight=" dp"
+            android:defaultValue="40"
+            android:key="my_profile_text_size"
+            android:max="40"
+            android:summary="@string/clock_size_summary"
+            android:title="Text Size" />
+
+        <com.martillero.romcontrol.prefs.MyEditTextPreference
+            android:dialogTitle="@string/Myedittext"
+            android:key="my_profile_information"
+            android:title="Companion Text" />
+    </PreferenceScreen>
+
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/lockscreen.xml -->

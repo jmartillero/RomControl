@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dp"
+        android:background="@drawable/cornerbackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+android:id/title"
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="?attr/navitextcolor"
+            android:shadowColor="?attr/circle_anim_color"
+            android:shadowDx="-5"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            fontPath="fonts/BornaSinner.ttf"/>
+
+    </LinearLayout>
+</LinearLayout><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/layout/preferences_category.xml -->

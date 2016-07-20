@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+
+    <release version="7.0" versioncode="18" >
+        <change>• Reworked lockscreen rotation toggle, smarter code now, so no more need to restart UI to update changes.</change>
+        <change>• Fixed Briefing issue when you scroll all the way down.</change>
+        <change>• Added Recent tabs style switch, to change between stock tabs or rounded tabs.</change>
+        <change>• Added Heads up timeout picker.</change>
+        <change>• Added Toggle Icons color selector, added 15 different colors to change the color of the icons.</change>
+        <change>• Added Brightness bar color selector, added 15 different colors to change the color of the bar.</change>
+        <change>• Added Brightness icon and checkbox color selector, added 15 different colors to change the color of the bar.</change>
+        <change>• Added 4g lte icon on data icon style changer.</change>
+        <change>• Added Custom 8 keys (quick panel) icon color picker.</change>
+        <change>• Added Hide Right icons on Lockscreen.</change>
+        <change>• Added toggle to show/hide divider vertical line between edit string/arrow and settings icon (dropdown).</change>
+        <change>• Added Ram Bar on recents.</change>
+        <change>• Added Ram Bar text colorpicker.</change>
+        <change>• Added Toggle on/off arrow animation on lockscreen shortcuts (phone and camera).</change>
+        <change>• Added Toggle on/off for shortcut preview effect on phone shortcut.</change>
+        <change>• Added on csc and floating features, possibility to on/off nfc icon when is active.</change>
+        <change>• Added on csc and floating features, possibility to on/off ',' (comma) icon on keyboard (thanks azar).</change>
+        <change>• Added new option on RomControl app to change between stock colors on dropdown and MM colors (presets), you can always keep customising color from color dropdown section.</change>
+        <change>• Changed string on custom keys from task list to recent panel to avoid confussion.</change>
+        <change>• Changed the whole status_bar xml align and gravity, now it should works well with flat style xposed module without overlapping.</change>
+        <change>• Changed Sound panel icons on power menu to match UI style.</change>
+        <change>• Removed Extra awkward bottom space on toggle editor.</change>
+        <change>• Removed Launcher and Launcher mods.</change>
+        <change>• Removed Visualizer mod cause it was causing lag.</change>
+        <change>• Added new mm Quick Connect style panel.</change>
+        <change>• Added new mm quick panel style panel.</change>
+        <change>• Added Edit Toggle panel Swithcer to choose between MM style or Stock colors in that panel.</change>
+    </release>
+
+    <release version="6.1" versioncode="17" >
+        <change>• Fixed lockscreen rotation toggle.</change>
+        <change>• Fixed s4 Build.prop effects lag.</change>
+        <change>• Minor theming fixes.</change>
+</release>
+
+    <release version="6.0" versioncode="16" >
+        <change>• Added custom image Lockscreen Clock Font toggle On/Off (You can change the images if you want from drawables folders)</change>
+        <change>• Added a toggle On/Off for status bar icons size, it will increase it a 5%.</change>
+        <change>• Added toggle On/Off for Blur effect on recent panel, so u can disable it if u doesnt like it.</change>
+        <change>• Experimental Center Lockscreen Clock toggle On/Off (have to make a hugh amount of changes to rearange everything properly, it should work fine)</change>
+        <change>• Added Lenox Header dropdown background (it changes according time/date)</change>
+        <change>• Added Notifications style Chooser, you can switch between stock (rectangular), Rounded (5dp), Rounded (10dp), Rounded (15dp), Custom BG.</change>
+        <change>• Added Notifications Horizontal Margin switcher - s6 Stock value with margins (2dp), or s4 style without margins (no gap)</change>
+        <change>• Added Notifications vertical Margin switcher, u can use stock (4dp), 2dp, or 3dp.</change>
+        <change>• Added Life Companion text on Lockscreen, toggle on/off, customizable text, custom colors, and custom size.</change>
+        <change>• Added resizable operator text slider.</change>
+        <change>• Added resizable Custom Dropdown text slider.</change>
+        <change>• Added toggle on/off for battery warning notifications.</change>
+        <change>• Fixed quick unlock toggle.</change>
+        <change>• Fixed "do not disturb mode" ongoing notification not appearing on dropdown.</change>
+        <change>• Added pinpad scramble with toggle on/off.</change>
+        <change>• Fixed virtual buttons missplaced (virtual recents and lock phone)</change>
+        <change>• Fixed shadow borders issue on curved notifications (only in dropdown expanded, still looking for popup).</change>
+        <change>• Added toggle to show/hide the first line text (above dropdown date).</change>
+        <change>• Changed clock smalis, with new option to add seconds, and put date to the left/right.</change>
+        <change>• Merged previous mods to clock files, like clock style toggle to choose between normal/funky/word clock.</change>
+        <change>• Added dropdown header text clock resizable.</change>
+        <change>• Added custom font support for lockscreen clock seconds.</change>
+        <change>• Added theme support for next alarm icon (so it will change its color according your theme clock color).</change>
+        <change>• Added language string support for advanced reboot menu (i only add my langugage, anyone feel free to add more langs).</change>
+        <change>• Used mm colors for framework.</change>
+        <change>• Fixed delay changing 3minit battery style, now has inmediat response.</change>
+        <change>• Added Ram text option on first line text.</change>
+        <change>• Added WeekDay option on first line text (You can choose between cpu, ram, weekday or custom text).</change>
+        <change>• Added Custom WeekDay Options, to choose between: long weekday/short weekday/</change>
+        <change>• Added resizable Ram text slider.</change>
+        <change>• Added custom color Ram text picker.</change>
+        <change>• Added resizable WeekDay text slider.</change>
+        <change>• Added custom color WeekDay text picker.</change>
+        <change>• Added 3minit Quick Panel toggle on/off for recents.</change>
+        <change>• Added 3minit Quick Panel toggle on QuickConnect Sfinder panel, so now you can choose between: QuickConnect-Sfinder(default)/custom 6 keys/custom 8 keys/3minit QuickPanel</change>
+        <change>• Added 8 more options for Increase toggles (from 21 toggles to 31, or all).</change>
+        <change>• Added RomControl Tile (toggle),so you can launch RC from dropdown.</change>
+        <change>• Added resizable Dropdown Date text slider.</change>
+        <change>• Added Dropdown Date toggle to override themes colors.</change>
+        <change>• Reworked Sfinder/Qconnect toggle mod, now it has cleaner code and works on the fly.</change>
+        <change>• Added custom color Dropdown Date text picker.</change>
+        <change>• RomControl rearranged and renewed. Added Changelog option in listview. Removed useful apps as they were just taking space.</change>
+        <change>• Added custom color picker for Dropdown settings icon.</change>
+        <change>• Added custom color picker for Dropdown custom 6 keys icons.</change>
+        <change>• Added custom color picker for Dropdown edit string.</change>
+        <change>• Added custom color picker for Dropdown line divider image.</change>
+        <change>• Added custom color picker for Dropdown text toggles.</change>
+        <change>• Added custom color picker for Dropdown quickConnect/sfinder text.</change>
+        <change>• Added custom color picker for Dropdown header background.</change>
+        <change>• Added custom color picker for Dropdown toggles panel background.</change>
+        <change>• Added custom color picker for Dropdown brightness panel background.</change>
+        <change>• Added custom color picker for Dropdown quickConnect/sfinder panel background. [ All of them have a toggle to avoid issues with themes or if you dont want to use custom colors.]</change>
+        <change>• Added seconds hand in analog clock on Dropdown in real time.</change>
+        <change>• Added Digital/analog clock picker for Lockscreen. Added Seconds in analog clock for Lockscreen.</change>
+        <change>• Added 3 more themes styles into RomControl Main App.</change>
+        <change>• Added AmbientDisplay toggle, and ability to control timeout.</change>
+        <change>• Some other changes I can't quite remember</change>
+
+    </release>
+    <release version="5.0" versioncode="15" >
+        <change>• Re-Added StatusBar Gradient with On/Off toggle.</change>
+        <change>• Fixed lockscreen StatusBar Gradient and CustomImage issue, now on lockscreen our statusbar will be clean (transparent).</change>
+        <change>• Finally fixed center status bar clock on lockscreen (i got blind digging throug smalis for this), now it wont appear on our lockscreen screen like it should be.</change>
+        <change>• New individual color pickers for status bar icons, you can colore them all with one, or individually color them one by one.</change>
+        <change>• Added Blur effect on recent panel.</change>
+        <change>• Added Blur effect on dropdown without affecting lockscreen and with toggle On/Off (for those who doenst like blurred dropdown).</change>
+        <change>• Added toggle On/off for ime keyboar icons/gps icon</change>
+        <change>• Added Seconds on LockScreen Clock with toggle On/Off.</change>
+        <change>• Fixed Automatic Brightness issue, and faster response time.</change>
+        <change>• Changed some clock fonts files.</change>
+        <change>• Added Custom Image mod on Dropdown with toggle On/Off, color picker, and changing option (it has an issue, wallpaper will affect lockscreen too, if i can will try to fix, or you can just disable it).</change>
+        <change>• Added On/Off toggle for All 360 Rotation Mod (needs a reboot)</change>
+        <change>• Added On/Off toggle for navigation bar Mod (needs a reboot/Touchwiz apps are not made to work with navigation bar so, you can see some things are not properly resized like TW launcher)</change>
+        <change>• Added Immersive Mod (fullscreen), you can choose to go full screen, hide statusbar, hide navigation bar, or default mode.</change>
+        <change>• Added Music Visualizer Mod with a toggle (it affects Dropdown and Lockscreen).</change>
+        <change>• Added Album Art with a toggle On/Off.</change>
+        <change>• Added Home Button wake-up screen with a toggle On/Off.</change>
+        <change>• Added PowerSaving toggle to Show/Hide PowerSaving notification in the Ongoing Dropdown.</change>
+        <change>• Ported Toast Animations from CM, you can select from more than 10 effects.</change>
+        <change>• Added on CSC mods, S6/S4 notification style. S6 style is with the Big Clock and Weather widget on top and notifications below. In S4 style when you have notifications, Clock will reduce its size and hide the weather widget. If you dont have notification will look like s6 style.</change>
+        <change>• Added Switch button Style, when you can use LG G3 Swtich Button style or Default.</change>
+        <change>• Added Volume Rocker Keys on Lockscreen, Toggle to On/Off, select key longpress timeout, volume up action/volume Down action.</change>
+
+    </release>
+
+    <release version="4.5" versioncode="14" >
+        <change>• Fixed center and left clock alignment to the exact center-vertical of screen.</change>
+        <change>• Added stock battery color picker.</change>
+        <change>• Added volume panel timeout picker.</change>
+        <change>• Added again Fullscreen Call / stock Call option.</change>
+        <change>• Added in General>csc / buildprops menu, MultiUser support or remove it.</change>
+        <change>• Regruped in General>Useful apps menu. "Other mods" menu added in rc.</change>
+        <change>• Re-added Hide background toggle (only icons option with no background)</change>
+        <change>• Added hide date in dropdown date options.</change>
+        <change>• Added launcher options> launch app effect on/off</change>
+        <change>• Dynamic grid change on/off</change>
+        <change>• Icon shadow on/off</change>
+        <change>• App drawer infinite scroll on/off</change>
+        <change>• Added hidden settings options.</change>
+        <change>• Fixed black background of launcher hidden settings (replaced by white one). Removed non working effects to avoid FC's</change>
+        <change>• Added volume warning w headphones toggle on/off.</change>
+        <change>• Added toggle to show/hide S Health Widget in Lockscreen.</change>
+        <change>• Added toggle to show/hide options for sigal, wifi.</change>
+        <change>• Added toggle to show/hide SHealth n' Weather container from Lockscreen.</change>
+        <change>• Added backup/restore options programatically on rom control. (thanks again Wuby and Daxgirl!)</change>
+        <change>• Fixed landscape number of toggles. (change in toggles columns, now you can choose 3,4,5,6</change>
+        <change>• Added back: divider line between settings button and edit string like original header.</change>
+        <change>• Changed RC themes.</change>
+    </release>
+
+
+    <release version="4.0" versioncode="13" >
+        <change>• Added color picker to all status bar icons,</change>
+        <change>• Added color picker for traffic network</change>
+        <change>• Added color picker for custom carrier in lockscreen and dropdown,</change>
+        <change>• Added color picker for ticker text on status bar.</change>
+        <change>• Added volume icon toggle for visibility (when in silent mode)</change>
+        <change>• 3 options to increase your toggles (21 / 26/ 34).</change>
+        <change>• Added volume sond when usb is plugged toggle.</change>
+        <change>• Added low battery sound toggle.</change>
+        <change>• Added 10 shortcuts support for toolbox.</change>
+        <change>• Removed sound warning with headphones on Player.</change>
+        <change>• You can put the custom text you want in dropdown above the date instead the cpu stats (you can toggle between them, or use transparency to hide). If you use long line, it will start a maquesine effect, moving from right to left.</change>
+        <change>• Added mokee listview animations and listview interpolator.</change>
+        <change>• Added full charge battery notification on dropdown toggle.</change>
+        <change>• Added calendar widget on lockscreen with toggle.</change>
+        <change>• Added number of notification change on lockscreen (2,3,4,5)</change>
+        <change>• Added phone shortcut on lockscreen toggle.</change>
+        <change>• Added the persistent data icon next to wifi in csc options for those who like it.</change>
+        <change>• Stagefright libraries can be enabled/disabled for those who cares about stagefright security</change>
+        <change>• Added new lockscreen clock option (now we will have tiny/small/normal).</change>
+        <change>• Fixed different clock positions on status bar, so no more icons being pushed away.</change>
+        <change>• I dont know maybe something more i forgot.</change>
+        <change>• Rom control reworked, a lot of cosmetic changes, others functional changes. new UI and 60% spanish translations support (im sorry im loo lazy, i start it but got bored)</change>
+
+    </release>
+
+    <release version="3.0" versioncode="12" >
+        <change>• Fixed all multiple background toggles size.</change>
+        <change>• 5 more toggle backgrounds added (Helix, Chrome, Chrome square, Bubble, Sunstar, ribbon)</change>
+        <change>• Added a new option of toggle background to colorize backgrounds with colorpicker.
+            If you want toggles default color just use white color, and if ou want toggles without background you can move the alpha bar for transparency to max.</change>
+        <change>• Fixed observer code for some elements.</change>
+        <change>• Changed some default values on smalis to preserve stock style after a full reboot, or a first installation for those implementing RC on a new rom.
+            <change>• Reworked clock and date features (clock size, font, date format and more).</change>
+            <change>• Fixed center clock appearing on Lockscreen bug.</change>
+            <change>• Corners in notifications (recent tab style)</change>
+            <change>• Fixed brightnes bar appearing after full reboot when you choose hide it on RC.</change>
+            <change>• Reworked Rom Control UI.</change>
+            <change>• Removed full battery notification.</change>
+            <change>• Removed Low battery warning in ticker.</change>
+            <change>• Added some more date formats in dropdown.</change>
+            <change>• Added Custom background StatusBar (diferent styles and colorable).</change>
+            <change>• Added Custom background RecentPanel (diferent styles and colorable).</change>
+            <change>• Added Custom background Header Dropdown (diferent styles and colorable).</change>
+            <change>• Added choosable Custom app icon in Dropdown next to the "edit" text (or user icon if its on)
+                You can show/hide the icon, and choose between calendar, camera, clock, contacts, gallery, messages, music, my files, Playstore, rom control, or video.</change>
+            <change>• Added option in general to change the StatusBar icon size, you can choose regular icons or bigger.</change>
+            The other elements of systemUI like clock/battery/network speed can be resize from RC to fit too.</change>
+        <change>• Added new section on for csc and build.prop features. Will be adding more, as remember useful things (all features from this section need a normal reboot to upgrade the changes).</change>
+    </release>
+    <release version="2.0" versioncode="11" >
+        <change>• Fixed some Issues</change>
+        <change>• Removed Small sView mod</change>
+        <change>• Some other changes I can't quite remember</change>
+    </release>
+    <release version="1.0" versioncode="10" >
+        <change>• First Version.</change>
+    </release>
+
+
+</changelog><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/changelog_master.xml -->

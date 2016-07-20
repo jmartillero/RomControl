@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="SystemUI Stock"
+        android:layout="@layout/sub_category"/>
+    <PreferenceCategory
+        android:layout="@layout/prefscustom"/>
+    <PreferenceScreen
+        android:key="script#stockui"
+        android:layout="@layout/prefscenter"
+        android:summary="&#8649;Press Here to Install&#8647;" />
+
+    <PreferenceCategory android:title="SystemUI MarshMallow"
+        android:layout="@layout/sub_category"/>
+    <PreferenceCategory
+        android:layout="@layout/prefscustom2"/>
+    <PreferenceScreen
+        android:key="script#mmui"
+        android:layout="@layout/prefscenter"
+        android:summary="&#8649;Press Here to Install&#8647;" />
+
+</PreferenceScreen>

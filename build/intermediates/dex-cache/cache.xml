@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.2.0\jars\libs\internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="58d0010cb4373696cfdc5894c4b23649af58ed18">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-c2f9dd857a8eb5eff1a01c3990fc54e41de2cbd7.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\libs\internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.0-c6c42f1740e7a9cda089657b2c46f280c5e8cf30.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.github.shell-software\viewmover\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d065ab6e064a1398750b52b1108e52c6d5e77807">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-ae9a7c5b27043e44e049336969636505a83e214f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Invitado 1\AppData\Local\Android\sdk\build-tools\23.0.2\renderscript\lib\renderscript-v8.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="762016371811e15a66e97cf27f3e852bf287aaf3">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\renderscript-v8-c1be7a93c6fbef7240631675906e62d6a4cf9bbe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Invitado 1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.0-87e1053cb0346faf4cac34786623dc0fa774ead4.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="f3a3189a228a65d03b3ea92a1b58a2b44bc7366e">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-54b69a7a3a81c827526460cd60a560a9b0fc5e41.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-9f8c9a2665d30554b4dd3bd47bececd8463ea67b.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-4bcf46112b920af8e19e901709eaa36d78ed31ae.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.github.bluejamesbond\textjustify-android\2.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="01d40085e187622594533159e2e21990edd60837">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-d7faf6cd4872bdf25570e5112ae213a407f0a96e.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.github.shell-software\uitools\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="841420e749b01799d17bf0a83cc6eb64dd8fa136">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-f2c78c3782ae8aeffde1b280872b7cf14f055733.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-7ba6551d96bb7fe1e4f32df843d0451e13a2fe55.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.afollestad.material-dialogs\core\0.8.5.6\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ac97333cacc3ad6aaa50eb762bbf49a9205205e6">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-0e9d67c74273964fc913f2499cf546f418ca76a4.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-dc56926d43c1145df6d756d7ff86da392ed30446.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-0753aa065627eda2ca8a5a1d2ba0b73e807409c3.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\uk.co.chrisjenx\calligraphy\2.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ebcb0bcf52fab7c586f39717f7cb8de91748b1b1">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-a2121efb6eb4fed94ab0bff0010e6629f9c1a62f.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\com.github.shell-software\fab\1.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="cf52449fa39e6e61964c43f880ea827e0bcc8c9c">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-cc28596cc5deb62d5c2c1bcfd6525ca8b238ca34.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\se.emilsjolander\stickylistheaders\2.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5682a0f7a23864f71e826f9a0fe567c2a2628cb1">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-e641ed0c6c8035ed14074c205adf30bef8664483.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\libs\RootTools.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fe32b2a391db4816b34b68bcfb1abd86a6e36940">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\RootTools-7a08422185808dfc639c13288f96ee1241209a77.jar" />
+    </item>
+    <item
+        jar="C:\StudioProjects\RomControl\app\build\intermediates\exploded-aar\me.zhanghai.android.materialprogressbar\library\1.1.4\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2a24cba08e1d865a79e61335f5a1bd64d520106d">
+        <dex dex="C:\StudioProjects\RomControl\app\build\intermediates\pre-dexed\debug\classes-6998cf9826c2d6b003688e44b3ac74200c084cfb.jar" />
+    </item>
+
+</items>

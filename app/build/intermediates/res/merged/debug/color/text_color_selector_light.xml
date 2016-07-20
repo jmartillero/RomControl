@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/myTextPrimaryColorLight" android:state_pressed="true" />
+    <item android:color="@color/myDrawerBackground" android:state_selected="true" />
+    <item android:color="@color/myTextPrimaryColorLight" android:state_selected="false" />
+</selector><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/color/text_color_selector_light.xml -->

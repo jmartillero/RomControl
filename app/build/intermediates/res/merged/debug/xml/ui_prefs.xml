@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/battery">
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/BatteryModeName"
+            android:entryValues="@array/BatteryModeValue"
+            android:key="killprocess_battery"
+            android:title="@string/battery_style" />
+        <PreferenceScreen
+            android:summary="@string/battery_summary"
+            android:title="@string/battery_settings">
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/battery_style" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="display_battery_percentage"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/battery_percentage" />
+
+            <PreferenceCategory
+                android:layout="@layout/sub_category"
+                android:title="@string/stock_battery" />
+
+        <PreferenceScreen
+            android:summary="Stock Battery personalization, colors, etc."
+            android:title="Stock Battery">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="killprocess_battery_meter"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/percentage_in" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                android:title="@string/battery_color"
+                android:key="battery_color"
+                android:summary="@string/colorpicker_summary"
+                android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:key="battery_voltage_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Battery Voltage Color" />
+            </PreferenceScreen>
+
+            <PreferenceCategory
+                android:layout="@layout/sub_category"
+                android:title="@string/og_battery_title" />
+            <Preference
+                android:summary="@string/og_summary"
+                android:title="@string/og_battery">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetClass="com.ghareeb.battery.Settings"
+                    android:targetPackage="com.ghareeb.battery" />
+            </Preference>
+
+            <PreferenceCategory
+                android:layout="@layout/sub_category"
+                android:title="@string/minit_battery_title" />
+            <Preference
+                android:summary="@string/minit_summary"
+                android:title="@string/minit_battery">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetClass="com.three.minit.minitbatterysettings.MainActivity"
+                    android:targetPackage="com.three.minit.minitbatterysettings.free" />
+            </Preference>
+    </PreferenceScreen>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/battery_bar" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="battery_bar"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/battery_bar" />
+
+    <PreferenceScreen
+        android:summary="@string/battery_bar_summary"
+        android:title="@string/battery_bar_settings"
+        android:dependency="battery_bar">
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/battery_bar" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="battery_bar"
+            android:key="battery_bar_animate"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/battery_bar_animation" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:dependency="battery_bar"
+            android:entries="@array/battery_bar_style_entries"
+            android:entryValues="@array/battery_bar_style_values"
+            android:key="battery_bar_style"
+            android:title="@string/battery_bar_style" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:dependency="battery_bar"
+            android:entries="@array/battery_bar_thickness_entries"
+            android:entryValues="@array/battery_bar_thickness_values"
+            android:key="battery_bar_thickness"
+            android:title="@string/battery_thickness" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-4268032"
+            android:dependency="battery_bar"
+            android:key="battery_bar_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/battery_bar_color" />
+
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/statusbar" />
+    <PreferenceCategory android:title="Potato Gradient StatusBar"
+        android:layout="@layout/sub_category" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="potato_on"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="StatusBar Gradient" />
+
+    <PreferenceScreen android:title="Gradient Style Settings" android:key="com.potato.gradientapp.MainActivity" />
+
+    <PreferenceCategory android:title="StatusBar Background"
+        android:layout="@layout/sub_category" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enable_statusbar_wallpaper"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/custom_image" />
+
+    <PreferenceScreen
+        android:title="Background Style Settings"
+        android:dependency="enable_statusbar_wallpaper">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/custom_image" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="enable_statusbar_wallpaper"
+            android:key="statusbar_wallpaper"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/statusbar_background_color" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="0"
+            android:dependency="statusbar_wallpaper"
+            android:key="statusbar_wallpaper_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/statusbar_color" />
+
+        <PreferenceScreen
+            android:dependency="enable_statusbar_wallpaper"
+            android:summary="@string/change_statusbar_summary"
+            android:title="@string/change_statusbar_image">
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="On/Of toggle to Update" />
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_1"
+                android:key="script#statusbar_1"
+                android:title="@string/Style_1" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_2"
+                android:key="script#statusbar_2"
+                android:title="@string/Style_2" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_3"
+                android:key="script#statusbar_3"
+                android:title="@string/Style_3" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_4"
+                android:key="script#statusbar_4"
+                android:title="@string/Style_4" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_5"
+                android:key="script#statusbar_5"
+                android:title="@string/Style_5" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_6"
+                android:key="script#statusbar_6"
+                android:title="@string/Style_6" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_7"
+                android:key="script#statusbar_7"
+                android:title="@string/Style_7" />
+
+            <PreferenceScreen
+                android:icon="@drawable/statusbar_8"
+                android:key="script#statusbar_8"
+                android:title="@string/Style_8" />
+
+    </PreferenceScreen>
+
+    </PreferenceScreen>
+
+    <PreferenceCategory android:title="Others StatusBar Mods"
+        android:layout="@layout/sub_category" />
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="0"
+        android:key="killprocess_statusbar_background_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/background_color" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="statusbar_double_tap_sleep"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/double_tap" />
+
+    <SwitchPreference
+        android:title="Bigger StatusBar Icons"
+        android:key="bigger_icons"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn" />
+    <PreferenceCategory android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡"
+        android:layout="@layout/restart_category" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Icon Colors" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="link_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Link All Colors" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="link_colors"
+        android:summary="Linked Color (ALL)"
+        android:title="Choose Linking Color (ALL)"
+        android:dependency="link_toggle"/>
+
+    <PreferenceScreen
+        android:summary="Choose every color separatly"
+        android:title="Select Individual Colors">
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Icon Colors" />
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="data_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="Data icon color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="wifi_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="Wifi icon color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="airplane_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="Airplane icon color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="signal_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="Signal icon color" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="icons_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/statusbar_icons_color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="ticker_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/ticker_color" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:key="battery_text_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/battery_text_color" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="status_bar_clock"
+            android:key="statusbar_clock_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/clock_color" />
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            android:title="@string/battery_color"
+            android:key="battery_color"
+            android:summary="@string/colorpicker_summary"
+            android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:key="battery_voltage_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Battery Voltage Color" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/clock_and_date" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="status_bar_clock"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/clock_and_date_show" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:defaultValue="0"
+        android:dependency="status_bar_clock"
+        app:drawableArray="@array/clock_pos_drawables"
+        app:entryList="@array/clock_style_entries2"
+        app:entryValuesList="@array/clock_style_values2"
+        android:key="statusbar_clock_style"
+        android:title="@string/clock_position" />
+
+    <PreferenceScreen
+        android:dependency="status_bar_clock"
+        android:summary="@string/clock_summary"
+        android:title="@string/clock_date_settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/clock_settings" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="status_bar_clock"
+            android:key="statusbar_clock_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/clock_color" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="1"
+            android:dependency="status_bar_clock"
+            android:entries="@array/clock_format_entries"
+            android:entryValues="@array/clock_format_values"
+            android:key="statusbar_clock_format"
+            android:title="@string/clock_style" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="status_bar_clock"
+            android:key="normal_upper"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/clock_upper" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="2"
+            android:dependency="status_bar_clock"
+            android:entries="@array/entries_status_bar_am_pm"
+            android:entryValues="@array/values_status_bar_am_pm"
+            android:key="statusbar_clock_am_pm_style"
+            android:title="@string/clock_ampm" />
+
+        <SwitchPreference
+            android:key="clock_use_second"
+            android:defaultValue="false"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="Use Seconds" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="5"
+            android:entries="@array/clock_font_style_entries"
+            android:entryValues="@array/clock_font_style_values"
+            android:key="statusbar_clock_font_style"
+            android:title="@string/clock_font" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="5"
+            unitsRight=" dp"
+            android:defaultValue="16"
+            android:dependency="status_bar_clock"
+            android:key="statusbar_clock_font_size"
+            android:max="25"
+            android:summary="@string/clock_size_summary"
+            android:title="@string/clock_size" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/date_settings" />
+
+        <SwitchPreference
+            android:key="statusbar_clock_date_position"
+            android:summaryOff="Left"
+            android:summaryOn="Right"
+            android:title="Date Position" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="0"
+            android:dependency="status_bar_clock"
+            android:entries="@array/clock_date_display_entries"
+            android:entryValues="@array/clock_date_display_values"
+            android:key="statusbar_clock_date_display"
+            android:title="@string/date_size" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="0"
+            android:dependency="status_bar_clock"
+            android:entries="@array/clock_date_style_entries"
+            android:entryValues="@array/clock_date_style_values"
+            android:key="statusbar_clock_date_style"
+            android:title="@string/date_style" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:defaultValue="EEE"
+            android:dependency="status_bar_clock"
+            android:entries="@array/clock_date_format_entries_values"
+            android:entryValues="@array/clock_date_format_entries_values"
+            android:key="statusbar_clock_date_format"
+            android:title="@string/date_format" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/network_speed_title" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/TrafficName"
+        android:entryValues="@array/TrafficValue"
+        android:key="killprocess_traffic_style"
+        android:title="@string/speed_display" />
+
+    <PreferenceScreen
+        android:summary="@string/network_speed_summary"
+        android:title="Speed Indicator Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/network_speed_title" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/traffic_style_entries"
+            android:entryValues="@array/traffic_style_values"
+            android:key="change_traffic_position"
+            android:title="@string/traffic_pos" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/show_network_speed_entries"
+            android:entryValues="@array/show_network_speed_values"
+            android:key="status_bar_network_speed_interval"
+            android:title="@string/display_network_speed" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="status_bar_clock"
+            android:key="traffic_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/traffic_color" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/network_size" />
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            android:key="killprocess_dualline_fontsize"
+            android:max="9"
+            android:summary="@string/traffic_size_summary"
+            android:title="@string/traffic_2line" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            android:key="killprocess_singleline_fontsize"
+            android:max="10"
+            android:summary="@string/traffic_size_summary"
+            android:title="@string/traffic_1line" />
+
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="WiFi - Signal - Data" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:key="killprocess_signal_style"
+        android:title="@string/signaliconchanger"
+        app:drawableArray="@array/signal_drawables"
+        app:entryList="@array/signal_icons"
+        app:entryValuesList="@array/signal_values" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:defaultValue="0"
+        app:entryList="@array/data_icons_entries"
+        app:entryValuesList="@array/data_icons_values"
+        app:drawableArray="@array/data_icons_drawables"
+        android:key="data_icons"
+        android:title="Data Icons Changer" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:key="killprocess_wifi_icon"
+        android:title="@string/wifiiconchanger"
+        app:drawableArray="@array/wifi_drawables"
+        app:entryList="@array/wifi_icons"
+        app:entryValuesList="@array/wifi_values" />
+
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        app:drawableArray="@array/wifi_pos_drawables"
+        app:entryList="@array/SignalPositionName"
+        app:entryValuesList="@array/SignalPositionValue"
+        android:key="signal_position"
+        android:title="@string/wifisignalpos" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/carrier_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="db_dormant_fenghenztlyys_icon"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/custom_carrier_title" />
+
+
+    <PreferenceScreen
+        android:summary="@string/custom_carrier_summary"
+        android:title="@string/custom_carrier_settings"
+        android:dependency="db_dormant_fenghenztlyys_icon">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/custom_carrier_settings" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:key="db_dormant_fenghenztlyysys_icon"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/custom_carrier_color" />
+
+        <com.martillero.romcontrol.prefs.MyEditTextPreference
+            android:key="db_dormant_fenghenztlwb_icon"
+            android:summary="@string/Myedittext"
+            android:title="@string/custom_carrier_change" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            android:max="25"
+            android:title="@string/lockscreen_operator_size"
+            android:key="carrier_size"
+            android:defaultValue="15" min="0" unitsRight=" dp" />
+
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/recent_title" />
+
+    <PreferenceCategory android:title="Recents Blur"
+        android:layout="@layout/sub_category" />
+    <SwitchPreference
+        android:title="Blur effect on Recents"
+        android:key="recent_blur"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn" />
+
+    <PreferenceCategory android:title="Recents Background"
+        android:layout="@layout/sub_category" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enable_recents_wallpaper"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/recent_on" />
+
+    <PreferenceScreen
+        android:title="Background Style Settings"
+        android:dependency="enable_recents_wallpaper">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:dependency="enable_recents_wallpaper"
+        android:key="toggle_RecentAppPanelWallpaper_color"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/recent_color" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="0"
+        android:dependency="toggle_RecentAppPanelWallpaper_color"
+        android:key="RecentAppPanelWallpaper_color"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/recent_colorize" />
+
+    <PreferenceScreen
+        android:dependency="enable_recents_wallpaper"
+        android:summary="@string/change_statusbar_summary"
+        android:title="@string/recent_change">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="On/Of toggle to Update" />
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_1"
+            android:key="script#recents_1"
+            android:title="@string/Style_1" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_2"
+            android:key="script#recents_2"
+            android:title="@string/Style_2" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_3"
+            android:key="script#recents_3"
+            android:title="@string/Style_3" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_4"
+            android:key="script#recents_4"
+            android:title="@string/Style_4" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_5"
+            android:key="script#recents_5"
+            android:title="@string/Style_5" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_6"
+            android:key="script#recents_6"
+            android:title="@string/Style_6" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_7"
+            android:key="script#recents_7"
+            android:title="@string/Style_7" />
+
+        <PreferenceScreen
+            android:icon="@drawable/pulldown_8"
+            android:key="script#recents_8"
+            android:title="@string/Style_8" />
+        </PreferenceScreen>
+
+    </PreferenceScreen>
+
+    <PreferenceCategory android:title="Ram Bar"
+        android:layout="@layout/sub_category" />
+
+    <SwitchPreference
+        android:title="Ram Bar on Recents"
+        android:key="ram_bar"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn" />
+
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Ram Used Text Color"
+        android:key="ram_color1"
+        android:summary="@string/colorpicker_summary"
+        android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        android:title="Ram Left Text Color"
+        android:key="ram_color2"
+        android:summary="@string/colorpicker_summary"
+        android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+
+    <PreferenceCategory android:title="3Minit Recents QuickPanel"
+        android:layout="@layout/sub_category" />
+
+    <SwitchPreference
+        android:title="Quick Panel on Recents"
+        android:key="extra_cluster"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn" />
+
+    <PreferenceCategory android:title="Recent Tabs Style"
+        android:layout="@layout/sub_category" />
+
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:title="Recent Tabs Style Switch"
+        android:key="modcfg_recents"
+        android:defaultValue="false"
+        android:summaryOn="Stock Style"
+        android:summaryOff="Rounded Style" />
+    <PreferenceCategory android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡"
+        android:layout="@layout/restart_category" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/ticker_title">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="ticker_toggle"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/ticker_on" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="ticker_gets_heads_up"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/ticker_head" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="heads_up_notifications_enabled"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/headupnoti" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/pref_heads_up_timeout_titles"
+            android:title="@string/pref_title_heads_up_timeout"
+            android:key="@string/pref_key_heads_up_timeout"
+            android:defaultValue="3000"
+            android:entryValues="@array/pref_heads_up_timeout_values" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Icons Visibility">
+
+        <PreferenceScreen
+            android:title="Show/Hide StatusBar Icons"
+            android:summary="Choose which statusbar icons you want visible or hidden.">
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Show/Hide StatusBar Icons"/>
+        <SwitchPreference
+            android:title="@string/show_signal_icon"
+            android:key="show_signal_icon"
+            android:defaultValue="true"
+            android:summaryOn="@string/summaryOn"
+            android:summaryOff="@string/summaryOff" />
+
+        <SwitchPreference
+            android:title="@string/show_wifi_icon"
+            android:key="show_wifi_icon"
+            android:defaultValue="true"
+            android:summaryOn="@string/summaryOn"
+            android:summaryOff="@string/summaryOff" />
+
+        <SwitchPreference
+            android:title="Blinking GPS Icon"
+            android:key="gps_icon"
+            android:defaultValue="true"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn" />
+
+        <SwitchPreference
+            android:title="IME Keyboard Icon"
+            android:key="show_ime_icon"
+            android:defaultValue="true"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="killprocess_status_bar_bluetooth"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/bt_toggle" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="volume_icon"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/sound_toggle" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="killprocess_status_bar_alarm"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/alarm_toggle" />
+
+        <SwitchPreference
+            android:title="@string/show_airplane_icon"
+            android:key="show_airplane_icon"
+            android:defaultValue="true"
+            android:summaryOn="@string/summaryOn"
+            android:summaryOff="@string/summaryOff" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/hidden_buttons">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="db_dormant_fenghenztlxnh_icon"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/virtual_recent" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="db_dormant_fenghenztlxni_icon"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/virtual_home" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="db_dormant_fenghenztlsjsp_icon"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/virtual_lock" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/ui_prefs.xml -->

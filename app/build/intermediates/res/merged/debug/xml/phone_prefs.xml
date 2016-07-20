@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/phone_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_call_record_in"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/incom_record" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_call_record_out"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/outcom_record" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_inc_volume_disable"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/incr_ring" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/CallDelayName"
+        android:entryValues="@array/CallDelayValue"
+        android:key="killprocess_call_delay"
+        android:summary="@string/call_delay_summ"
+        android:title="@string/call_delay" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="InCall UI Mods" />
+    <PreferenceScreen
+        android:key="script#fullscreen_Off"
+        android:summary="@string/app_reboot_required_message3"
+        android:title="Stock Incall UI" />
+
+    <PreferenceScreen
+        android:key="script#fullscreen_On"
+        android:summary="@string/app_reboot_required_message3"
+        android:title="FullScreen Incall UI" />
+
+</PreferenceScreen>
+<!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/phone_prefs.xml -->

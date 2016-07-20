@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/toggles_title" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Toggles Number" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="0"
+        android:entries="@array/martillero_toggle_entries"
+        android:entryValues="@array/martillero_toggle_values"
+        android:key="toggles_on_view"
+        android:title="@string/n_toggles_panel" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="20"
+        android:entries="@array/toggle_scroll_entries"
+        android:entryValues="@array/toggle_scroll_values"
+        android:key="notification_panel_active_number_of_apps"
+        android:title="@string/number_toggles" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/toggles_n_entries"
+        android:entryValues="@array/toggles_n_values"
+        android:key="notification_panel_active_app_list"
+        android:summary="@string/toggles_increase_summary"
+        android:title="@string/toggles_increase" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Toggles Text" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="toggle_text"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/hide_toggles" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Toggles Icon Color" />
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:key="toggle_icon_color"
+        android:title="Toggle Icon Color"
+        app:drawableArray="@array/toggle_color_drawables"
+        app:entryList="@array/toggle_color_entries"
+        app:entryValuesList="@array/toggle_color_values" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Toggles Background" />
+    <com.martillero.romcontrol.prefs.ThumbnailListPreference
+        android:key="toggle_buttons_background"
+        android:title="@string/toggle_buttons_background_title"
+        app:drawableArray="@array/toggle_drawables"
+        app:entryList="@array/toggle_buttons_background_entries"
+        app:entryValuesList="@array/toggle_buttons_background_values" />
+
+    <SwitchPreference
+        android:key="use_toggle_bg_color"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Colorize BG" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="toggle_buttons_background_color"
+        android:summary="@string/toggles_color_summary"
+        android:title="@string/toggles_back_color" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/dropdown_header" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Custom Color Header" />
+
+    <PreferenceScreen android:title="Header Color Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Custom Color Header BG" />
+
+        <SwitchPreference
+            android:key="use_header_theme_color"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="Use Custom Color (Override theme)" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="use_header_theme_color"
+            android:key="header_bg_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Header BG Color" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Lenox Header Background" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="awesomehead"
+        android:title="Lenox Background (change by hs)" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Custom Header Background" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enable_header_wallpaper"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/custom_header_image" />
+    <PreferenceScreen
+        android:dependency="enable_header_wallpaper"
+        android:title="Background Style Settings">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="enable_header_wallpaper"
+            android:key="toggle_headerwallpaper_color"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/header_color_on" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="0"
+            android:dependency="toggle_headerwallpaper_color"
+            android:key="headerwallpaper_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="@string/header_color" />
+
+        <PreferenceScreen
+            android:dependency="enable_header_wallpaper"
+            android:summary="@string/change_statusbar_summary"
+            android:title="@string/header_change">
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="On/Of toggle to Update" />
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_1"
+                android:key="script#header_1"
+                android:title="@string/Style_1" />
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_2"
+                android:key="script#header_2"
+                android:title="@string/Style_2" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_3"
+                android:key="script#header_3"
+                android:title="@string/Style_3" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_4"
+                android:key="script#header_4"
+                android:title="@string/Style_4" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_5"
+                android:key="script#header_5"
+                android:title="@string/Style_5" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_6"
+                android:key="script#header_6"
+                android:title="@string/Style_6" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_7"
+                android:key="script#header_7"
+                android:title="@string/Style_7" />
+
+            <PreferenceScreen
+                android:icon="@drawable/pulldown_8"
+                android:key="script#header_8"
+                android:title="@string/Style_8" />
+        </PreferenceScreen>
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/clock_and_date" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Clock" />
+    <PreferenceScreen android:title="Clock Style Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Clock Style Settings" />
+
+        <com.martillero.romcontrol.prefs.ThumbnailListPreference
+            android:key="change_expanded_clock"
+            android:title="@string/drop_clock_format"
+            app:drawableArray="@array/clock_drawables"
+            app:entryList="@array/clock_style_entries"
+            app:entryValuesList="@array/clock_style_values" />
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="For Digital Clock" />
+        <SwitchPreference
+            android:key="use_clock_theme_color"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="Use Custom Color (Override theme)" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="use_clock_theme_color"
+            android:key="dropdown_clock_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Clock Color" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/drop_clock_entries"
+            android:entryValues="@array/drop_clock_values"
+            android:key="drop_clock_size"
+            android:title="Digital Clock Size" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Date" />
+    <PreferenceScreen android:title="Date Style Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Date Style Settings" />
+
+        <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/date_style_entries"
+            android:entryValues="@array/date_style_values"
+        android:key="dropdate_format"
+            android:summary="@string/drop_date_choose"
+            android:title="@string/drop_date_style" />
+
+        <SwitchPreference
+            android:key="use_theme_color"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="Use Custom Color (Override theme)" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:dependency="use_theme_color"
+            android:key="DropDown_Date_Color"
+            android:summary="@string/colorpicker_summary"
+            android:title="Date Color" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="0"
+            unitsRight=" dp"
+            android:defaultValue="12"
+            android:key="DropDown_Date_Size"
+            android:max="25"
+            android:title="Date Size" />
+    </PreferenceScreen>
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/shorcuts" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Header Shortcuts" />
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:key="modcfg_edit_switch"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="\'Edit\' Text/Icon Switch" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Reboot Phone to update changes! ⇡⇡" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="hide_toggles_button"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/edit_text" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="divider_hide"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Show Divider Line" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="@string/memorycleaner" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pekaka_memCleanView"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/memorycleaner" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-4336128"
+        android:dependency="pekaka_memCleanView"
+        android:key="db_inkeffect_pekaka_memkiller_picker"
+        android:summary="@string/colorpicker_summary"
+        android:title="@string/memorycolor" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/carrier_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="drop_carrier_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Custom Carrier" />
+
+    <PreferenceScreen
+        android:dependency="drop_carrier_toggle"
+        android:title="Carrier Style Settings">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/carrier_title" />
+        <com.martillero.romcontrol.prefs.MyEditTextPreference
+            android:defaultValue="CustomCarrier"
+            android:dialogTitle="@string/Myedittext"
+            android:key="drop_carrier_label"
+            android:summary="@string/Myedittext"
+            android:title="@string/drop_carrier_text" />
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-1"
+            android:key="panel_carrier_color"
+            android:title="@string/custom_carrier_color" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="First Line Header Text" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="first_line"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Use First Line Text" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:dependency="first_line"
+        android:entries="@array/FirstLineModeName"
+        android:entryValues="@array/FirstLineModeValue"
+        android:key="first_line_list"
+        android:title="Choose Display Text Style" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Ram Text" />
+    <PreferenceScreen
+        android:dependency="first_line"
+        android:summary="Personalize Ram Text Settings"
+        android:title="Ram Text Settings">
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-13542266"
+            android:dependency="first_line"
+            android:key="memo_ram_text_color"
+            android:title="Ram color" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="0"
+            unitsRight=" dp"
+            android:defaultValue="12"
+            android:dependency="first_line"
+            android:key="ram_size"
+            android:max="25"
+            android:title="Ram Text Size" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Custom Text" />
+
+    <PreferenceScreen
+        android:dependency="first_line"
+        android:summary="Personalize Custom Text Settings"
+        android:title="Custom Text Settings">
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-13542266"
+            android:dependency="first_line"
+            android:key="MyCustomText_color"
+            android:summary="@string/cust_text_color_summary"
+            android:title="@string/cust_text_color" />
+
+        <com.martillero.romcontrol.prefs.MyEditTextPreference
+            android:defaultValue="          ..:::CustomText:::..          "
+            android:dependency="first_line"
+            android:dialogTitle="@string/Myedittext"
+            android:key="MyCustomText_string"
+            android:summary="@string/Myedittext"
+            android:title="@string/cust_text_change" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="0"
+            unitsRight=" dp"
+            android:defaultValue="12"
+            android:dependency="first_line"
+            android:key="MyCustomText_size"
+            android:max="25"
+            android:title="Custom Text Size" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="CPU Text" />
+    <PreferenceScreen
+        android:dependency="first_line"
+        android:summary="Personalize Cpu Text Settings"
+        android:title="Cpu Text Settings">
+
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-13542266"
+            android:dependency="first_line"
+            android:key="cpu_txt_color"
+            android:summary="@string/cust_text_color_summary"
+            android:title="@string/cpu_color" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="WeekDay Text" />
+    <PreferenceScreen
+        android:dependency="first_line"
+        android:summary="Personalize WeekDay Text Settings"
+        android:title="WeekDay Text Settings">
+        <com.martillero.romcontrol.prefs.MyListPreference
+            android:entries="@array/week_day_entries"
+            android:entryValues="@array/week_day_values"
+            android:key="switch_week"
+            android:title="WeekDay Style" />
+        <com.martillero.romcontrol.prefs.ColorPickerPreference
+            alphaSlider="true"
+            hexValue="true"
+            android:defaultValue="-4849660"
+            android:key="Dropdown_Date_color"
+            android:summary="@string/colorpicker_summary"
+            android:title="WeekDay Color" />
+
+        <com.martillero.romcontrol.prefs.SeekBarPreference
+            min="0"
+            unitsRight=" dp"
+            android:defaultValue="12"
+            android:key="Dropdown_Date_Size"
+            android:max="25"
+            android:title="WeekDay Size" />
+    </PreferenceScreen>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/drop_elemnts" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="notification_panel_brightness_adjustment"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/bright_visible" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="quick_connect_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/qpanel_visibility" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/ListViewKeyName"
+        android:entryValues="@array/ListViewKeyValue"
+        android:key="q_connect_panel"
+        android:title="@string/qpanel_style" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="DropDown Background" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Blur Effect" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="hide_dropdown_background"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/cust_dark_back" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Notifications Style" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/round_corners_entries"
+        android:entryValues="@array/round_corners_values"
+        android:key="round_corners"
+        android:title="Notifications Corners Style" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/round_corners_entries"
+        android:entryValues="@array/round_corners_values"
+        android:key="round_corners_lockscreen"
+        android:title="Notifications Lock Corners Style" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/notif_margin_entries"
+        android:entryValues="@array/notif_margin_values"
+        android:key="notif_margin"
+        android:title="Notifications Horizontal Gap" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/notif_gap_entries"
+        android:entryValues="@array/notif_gap_values"
+        android:key="notif_gap"
+        android:title="Notifications Vertical Gap" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="DropDown Colors" />
+    <PreferenceScreen
+        android:summary="Change colors of the different dropdown elements"
+        android:title="Change Icons, Text, Bg Colors">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Panel Backgrounds Colors" />
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Header Panel" />
+        <PreferenceScreen android:title="Header BG Color">
+
+            <SwitchPreference
+                android:key="use_header_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_header_theme_color"
+                android:key="header_bg_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Header BG Color" />
+        </PreferenceScreen>
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Toggles Panel" />
+
+        <PreferenceScreen android:title="Toggles Panel BG Color">
+            <SwitchPreference
+                android:key="use_toggle_bg_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_toggle_bg_theme_color"
+                android:key="toggle_bg_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Toggle BG" />
+        </PreferenceScreen>
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Brightness Panel" />
+
+        <PreferenceScreen android:title="Brightness BG Color">
+            <SwitchPreference
+                android:key="use_slider_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_slider_theme_color"
+                android:key="slider_bg_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Brightnes Bg Color" />
+        </PreferenceScreen>
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Sfinder/QuickConnect" />
+
+        <PreferenceScreen android:title="Sfinder BG Color">
+            <SwitchPreference
+                android:key="use_sfinder_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_sfinder_theme_color"
+                android:key="sfinder_bg_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="QuickPanel Bg Color" />
+        </PreferenceScreen>
+
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Header Panel" />
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Clock" />
+        <PreferenceScreen android:title="Clock Text Color">
+            <SwitchPreference
+                android:key="use_clock_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_clock_theme_color"
+                android:key="dropdown_clock_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Clock Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Date" />
+        <PreferenceScreen android:title="Date Text Color">
+            <SwitchPreference
+                android:key="use_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_theme_color"
+                android:key="DropDown_Date_Color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Date Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Settings Icon" />
+        <PreferenceScreen android:title="Settings Icon Color">
+            <SwitchPreference
+                android:key="use_settings_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_settings_theme_color"
+                android:key="settings_button_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Settings Button Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Divider" />
+        <PreferenceScreen android:title="Vertical Divider">
+            <SwitchPreference
+                android:key="use_divider_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_divider_theme_color"
+                android:key="divider_image_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Divider Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Arrow (or Edit String)" />
+        <PreferenceScreen android:title="Arrow Image (or Edit String) Color">
+            <SwitchPreference
+                android:key="use_edit_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_edit_theme_color"
+                android:key="edit_string_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Arrow Image (or Edit String)" />
+        </PreferenceScreen>
+
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Toggles" />
+
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Toggles Icon Color" />
+        <com.martillero.romcontrol.prefs.ThumbnailListPreference
+            android:key="toggle_icon_color"
+            android:title="Toggle Icon Color"
+            app:drawableArray="@array/toggle_color_drawables"
+            app:entryList="@array/toggle_color_entries"
+            app:entryValuesList="@array/toggle_color_values" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Toggles BG Color" />
+        <PreferenceScreen android:title="Choose Toggles BG Color">
+            <SwitchPreference
+                android:key="use_toggle_bg_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Colorize BG" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:key="toggle_buttons_background_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Toggle Icon BG Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="Toggles Text Color" />
+        <PreferenceScreen android:title="Toggles Text Color">
+            <SwitchPreference
+                android:key="use_toggle_string_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_toggle_string_theme_color"
+                android:key="toggle_string_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Text Toggles" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_toggle_string_theme_color"
+                android:key="toggle_string_paired_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="Paired device and Wifi" />
+        </PreferenceScreen>
+
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="Brightness Panel" />
+        <com.martillero.romcontrol.prefs.ThumbnailListPreference
+            android:key="brillo_icon_color"
+            android:title="Brightness Icon Color"
+            app:drawableArray="@array/toggle_color_drawables"
+            app:entryList="@array/toggle_color_entries"
+            app:entryValuesList="@array/toggle_color_values" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+        <com.martillero.romcontrol.prefs.ThumbnailListPreference
+            android:key="brillo_color"
+            android:title="Brightness Bar Color"
+            app:drawableArray="@array/toggle_color_drawables"
+            app:entryList="@array/toggle_color_entries"
+            app:entryValuesList="@array/toggle_color_values" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+        <com.martillero.romcontrol.prefs.ThumbnailListPreference
+            android:key="checkbox_icon_color"
+            android:title="Checkbox Color"
+            app:drawableArray="@array/toggle_color_drawables"
+            app:entryList="@array/toggle_color_entries"
+            app:entryValuesList="@array/toggle_color_values" />
+        <PreferenceCategory
+            android:layout="@layout/restart_category"
+            android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="QuickConnect Panel" />
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="QConnect/Sfinder" />
+        <PreferenceScreen android:title="QConnect Text Color">
+            <SwitchPreference
+                android:key="use_finder_text_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_finder_text_theme_color"
+                android:key="finder_string_color"
+                android:summary="@string/colorpicker_summary"
+                android:title="QConnect/Sfinder Text Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="6 Keys Icons" />
+        <PreferenceScreen android:title="6 Key Icons Color">
+            <SwitchPreference
+                android:key="use_task_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_task_theme_color"
+                android:key="six_ic_expanded_task"
+                android:summary="@string/colorpicker_summary"
+                android:title="6 Key Icons Color" />
+        </PreferenceScreen>
+        <PreferenceCategory
+            android:layout="@layout/sub_category"
+            android:title="8 Keys Icons" />
+        <PreferenceScreen android:title="8 Key Icons Color">
+            <SwitchPreference
+                android:key="use_8task_theme_color"
+                android:summaryOff="@string/summaryOff"
+                android:summaryOn="@string/summaryOn"
+                android:title="Use Custom Color (Override theme)" />
+            <PreferenceCategory
+                android:layout="@layout/restart_category"
+                android:title="⇡⇡ ¡Restart UI to update changes! ⇡⇡" />
+            <com.martillero.romcontrol.prefs.ColorPickerPreference
+                alphaSlider="true"
+                hexValue="true"
+                android:defaultValue="-1"
+                android:dependency="use_8task_theme_color"
+                android:key="eight_ic_expanded_task"
+                android:summary="@string/colorpicker_summary"
+                android:title="8 Key Icons Color" />
+        </PreferenceScreen>
+
+    </PreferenceScreen>
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/dropdown.xml -->

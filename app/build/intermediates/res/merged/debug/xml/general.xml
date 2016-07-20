@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/general_6">
+        <PreferenceScreen
+            android:icon="?attr/keys"
+            android:summary="@string/general_8"
+            android:title="@string/general_7">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/general_7" />
+
+            <PreferenceScreen
+                android:key="script#s4_keys"
+                android:summary="@string/app_reboot_required_message3"
+                android:title="@string/general_9" />
+
+            <PreferenceScreen
+                android:key="script#s6_keys"
+                android:summary="@string/app_reboot_required_message3"
+                android:title="@string/general_10" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="BootAnimations">
+        <PreferenceScreen
+            android:icon="?attr/ic_backup"
+            android:summary="Change your Bootanimation"
+            android:title="BootAnimations">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="BootAnimations" />
+
+            <PreferenceScreen
+                android:icon="@drawable/boot_stock"
+                android:key="script#boot_stock"
+                android:summary="@string/app_reboot_required_message4"
+                android:title="Samsung Stock" />
+
+            <PreferenceScreen
+                android:icon="@drawable/boot_6"
+                android:key="script#boot_android6"
+                android:summary="@string/app_reboot_required_message4"
+                android:title="Android MarshMallow" />
+
+            <PreferenceScreen
+                android:icon="@drawable/boot_mm"
+                android:key="script#boot_androidm"
+                android:summary="@string/app_reboot_required_message4"
+                android:title="Android 6.0.1" />
+
+            <PreferenceScreen
+                android:icon="@drawable/boot_marvel"
+                android:key="script#boot_marvel"
+                android:summary="@string/app_reboot_required_message4"
+                android:title="Marvel and DC Characters" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/general_18">
+
+        <Preference
+            android:icon="?attr/wifi"
+            android:summary="@string/general_20"
+            android:title="@string/general_19">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.vorsk.wifirecovery.HomeActivity"
+                android:targetPackage="com.vorsk.wifirecovery" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/general_21">
+        <PreferenceScreen
+            android:icon="?attr/audio"
+            android:summary="@string/general_23"
+            android:title="@string/general_22">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/general_22" />
+
+        <PreferenceScreen
+        android:key="script#normalsound"
+            android:summary="@string/app_reboot_required_message3"
+            android:title="@string/general_24" />
+
+        <PreferenceScreen
+        android:key="script#loudersound"
+            android:summary="@string/app_reboot_required_message3"
+            android:title="@string/general_25" />
+
+        <PreferenceScreen
+        android:key="script#lowsound"
+            android:summary="@string/app_reboot_required_message3"
+            android:title="@string/general_26" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/general_27" />
+    <PreferenceScreen
+        android:icon="?build"
+        android:summary="@string/general_28"
+        android:title="@string/general_27">
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/general_29" />
+
+        <PreferenceScreen
+            android:key="script#user_s4_build"
+            android:summary="@string/app_reboot_required_message3"
+            android:title="@string/general_30" />
+
+        <PreferenceScreen
+            android:key="script#user_s6_build"
+            android:summary="@string/app_reboot_required_message3"
+            android:title="@string/general_31" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="MultiUser Support" />
+
+        <PreferenceScreen
+            android:key="script#Multiuser_On"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="Add Multi-User support" />
+
+        <PreferenceScreen
+            android:key="script#Multiuser_Off"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="Remove Multi-User support" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="NFC icon on StatusBar" />
+
+        <PreferenceScreen
+            android:key="script#nfc_on"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="NFC icon ON" />
+
+        <PreferenceScreen
+            android:key="script#nfc_off"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="NFC icon OFF" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/general_32" />
+        <PreferenceScreen
+            android:key="script#call_in_log"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="@string/general_33" />
+        <PreferenceScreen
+            android:key="script#call_in_log_off"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="@string/general_34" />
+
+        <PreferenceCategory
+            android:layout="@layout/preferences_category"
+            android:title="@string/general_35" />
+        <PreferenceScreen
+            android:icon="?attr/symbol"
+            android:key="script#keysymbol"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="@string/general_36" />
+        <PreferenceScreen
+            android:icon="?attr/nosymbol"
+            android:key="script#keysymbol_off"
+            android:summary="@string/app_reboot_required_message2"
+            android:title="@string/general_37" />
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Dpi Change"/>
+
+        <PreferenceScreen
+            android:icon="?attr/sounds"
+            android:summary="@string/general_49"
+            android:title="DPI Change">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="Dpi Change"/>
+            <PreferenceScreen
+                android:key="script#dpi_480"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="Dpi 480 (stock)" />
+            <PreferenceScreen
+                android:key="script#dpi_440"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="Dpi 440" />
+            <PreferenceScreen
+                android:key="script#dpi_430"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="Dpi 430" />
+            <PreferenceScreen
+                android:key="script#dpi_420"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="Dpi 420" />
+        </PreferenceScreen>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/general_47">
+        <PreferenceScreen
+            android:icon="?attr/sounds"
+            android:summary="@string/general_49"
+            android:title="@string/general_48">
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/general_50" />
+            <PreferenceScreen
+                android:key="script#enable_audio_boot"
+                android:icon="?attr/soundtoggleon"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_51" />
+
+            <PreferenceScreen
+                android:key="script#disable_audio_boot"
+                android:icon="?attr/soundtoggleoff"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_52" />
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/general_53" />
+            <PreferenceScreen
+                android:key="script#enable_audio_charge"
+                android:icon="?attr/soundtoggleon"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_54" />
+
+            <PreferenceScreen
+                android:key="script#disable_audio_charge"
+                android:icon="?attr/soundtoggleoff"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_55" />
+
+            <PreferenceCategory
+                android:layout="@layout/preferences_category"
+                android:title="@string/general_56" />
+            <PreferenceScreen
+                android:key="script#enable_audio_volume"
+                android:icon="?attr/soundtoggleon"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_57" />
+
+            <PreferenceScreen
+                android:key="script#disable_audio_volume"
+                android:icon="?attr/soundtoggleoff"
+                android:summary="@string/app_reboot_required_message2"
+                android:title="@string/general_58" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/useful"/>
+
+        <PreferenceCategory android:title="UPSM Manager"
+            android:layout="@layout/sub_category" />
+    <PreferenceScreen
+        android:icon="@drawable/upms"
+        android:summary="@string/ultra_summ"
+        android:title="UPSM Manager">
+        <intent
+            android:targetClass="mobi.xperiacle.upsm.manager.MainActivity"
+            android:targetPackage="mobi.xperiacle.upsm.manager" />
+    </PreferenceScreen>
+
+        <PreferenceCategory android:title="SuperSU"
+            android:layout="@layout/sub_category" />
+    <PreferenceScreen
+        android:icon="@drawable/su"
+        android:key="eu.chainfire.supersu.MainActivity"
+        android:summary="@string/root_summ"
+        android:title="SuperSu" />
+
+
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/general.xml -->

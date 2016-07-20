@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/home_key_14"
+        android:layout="@layout/preferences_category"/>
+
+    <SwitchPreference
+        android:title="@string/home_key_15"
+        android:key="double_tab_launch"
+        android:defaultValue="true"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <com.martillero.romcontrol.prefs.IntentDialogPreference
+        android:key="double_tab_launch_component"
+        android:title="@string/home_key_16"
+        android:dialogTitle="@string/app_reboot_required_title"
+        android:summary="Choose your Custom App"/>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/key_longpress_actions"
+        android:title="@string/home_key_1"
+        android:key="aurora_long_press_home"
+        android:summary="@string/home_key_2"
+        android:entryValues="@array/key_longpress_action_values" />
+
+    <PreferenceCategory android:title="@string/home_key_3"
+        android:layout="@layout/preferences_category"/>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/key_longpress_actions"
+        android:title="@string/home_key_4"
+        android:key="aurora_long_press_menu"
+        android:summary="@string/home_key_5"
+        android:entryValues="@array/key_longpress_action_values" />
+
+    <PreferenceCategory android:title="@string/home_key_6"
+        android:layout="@layout/preferences_category"/>
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/key_longpress_actions"
+        android:title="@string/home_key_7"
+        android:key="aurora_long_press_back"
+        android:summary="@string/home_key_8"
+        android:entryValues="@array/key_longpress_action_values" />
+
+    <PreferenceCategory android:title="LockScreen Music Volume Keys"
+        android:layout="@layout/preferences_category"/>
+    <SwitchPreference
+        android:title="Volume Music Control"
+        android:key="volbtn_music_controls"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/volbtn_timeout_entries"
+        android:title="Key LongPress Timeout"
+        android:key="volbtn_timeout"
+        android:dependency="volbtn_music_controls"
+        android:entryValues="@array/volbtn_timeout_values" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/volbtn_action_entries"
+        android:title="Volume Up Action"
+        android:key="volbtn_vol_up"
+        android:dependency="volbtn_music_controls"
+        android:entryValues="@array/volbtn_action_values" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/volbtn_action_entries"
+        android:title="Volume Down Action"
+        android:key="volbtn_vol_down"
+        android:dependency="volbtn_music_controls"
+        android:entryValues="@array/volbtn_action_values" />
+
+    <PreferenceCategory android:title="@string/home_key_9"
+        android:layout="@layout/preferences_category"/>
+
+    <SwitchPreference
+        android:title="@string/home_key_10"
+        android:key="torchlight_enable"
+        android:defaultValue="false"
+        android:summary="@string/home_key_11"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/LockScreenTorchTimeoutName"
+        android:title="@string/home_key_12"
+        android:key="torchlight_timeout"
+        android:summary="@string/home_key_13"
+        android:entryValues="@array/LockScreenTorchTimeoutValue" />
+
+</PreferenceScreen>

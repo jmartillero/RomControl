@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/Advanced_Features_Menu" />
+
+    <PreferenceScreen
+        android:icon="@drawable/develop"
+        android:summary="@string/dev_summ"
+        android:title="@string/Development_Settings">
+        <intent
+            android:targetClass="com.android.settings.DevelopmentSettings"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/network"
+        android:summary="Mobile Network and wifi Information and Settings"
+        android:title="@string/Device_Network_Info_and_Settings">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.TestingSettings"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/usb"
+        android:summary="*#3424# Or *#0808# features menu"
+        android:title="@string/Mobile_USB_mode_settings">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.sec.usbsettings.USBSettings"
+            android:targetPackage="com.sec.usbsettings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/apn"
+        android:summary="Configurations and Information on Phone Access Point"
+        android:title="@string/Phone_APN_Set_up">
+        <intent
+            android:action="android.settings.APN_SETTINGS"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/bateria"
+        android:summary="Calibrate and get information about phone battery"
+        android:title="@string/Battery_Information_and_Calibration">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.sec.android.app.status.BatteryStatus"
+            android:targetPackage="com.sec.android.app.factorykeystring" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/gps"
+        android:summary="Shows the satellites near your position, saved from agps data"
+        android:title="@string/GPS_Satellite_Viewer">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.location.SatelliteView"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/diagnos"
+        android:summary="Test, diagnose and get device hardware information"
+        android:title="@string/Diagnose_Device_Hardware_issues">
+        <intent
+            android:action="android.provider.Telephony.SECRET_CODE"
+            android:targetClass="com.sec.android.app.hwmoduletest.HwModuleTest"
+            android:targetPackage="com.sec.android.app.hwmoduletest" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/log"
+        android:summary="Shows a brief log of statics about the usage of your apps"
+        android:title="@string/Usage_Stats_Activity">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.UsageStatsActivity"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/advanced.xml -->

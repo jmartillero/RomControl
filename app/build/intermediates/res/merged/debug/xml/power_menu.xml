@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/adv_pwer"
+        android:layout="@layout/preferences_category"/>
+    <SwitchPreference
+        android:title="@string/pwer_off"
+        android:key="killprocess_power_menu_power"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/data"
+        android:key="killprocess_power_menu_data"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/flight"
+        android:key="killprocess_power_menu_airplane"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/restart"
+        android:key="killprocess_power_menu_restart"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/scrshot"
+        android:key="killprocess_power_menu_screenshot"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/flash"
+        android:key="killprocess_power_menu_flashlight"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/record"
+        android:key="killprocess_power_menu_screenrecord"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/emergency"
+        android:key="killprocess_power_menu_emergency"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+    <SwitchPreference
+        android:title="@string/ring"
+        android:key="killprocess_power_menu_mode"
+        android:summaryOn="@string/summaryOn"
+        android:summaryOff="@string/summaryOff" />
+
+</PreferenceScreen><!-- From: file:/C:/StudioProjects/RomControl/app/src/main/res/xml/power_menu.xml -->
