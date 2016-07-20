@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Animations" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="ListView" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="0"
+        android:entries="@array/listview_animation_entries"
+        android:entryValues="@array/listview_animation_values"
+        android:key="listview_animation"
+        android:summary="%s"
+        android:title="@string/list_animation" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue="0"
+        android:entries="@array/listview_interpolator_entries"
+        android:entryValues="@array/listview_interpolator_values"
+        android:key="listview_interpolator"
+        android:summary="%s"
+        android:title="@string/list_interpolator" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:defaultValue=""
+        android:entries="@array/list_test_view"
+        android:entryValues="@array/list_test_view_values"
+        android:key=""
+        android:title="ListView Test" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Toast" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/toast_animation_entries"
+        android:entryValues="@array/toast_animation_values"
+        android:key="toast_animation"
+        android:title="@string/toast_animation_title" />
+    <PreferenceScreen
+        android:key="script#test"
+        android:title="Test Toast Animation" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Switch Button Style" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/switch_button_entries"
+        android:entryValues="@array/switch_button_values"
+        android:key="switch_button_style"
+        android:title="Switch Button Style" />
+
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/switch_notif_sounds">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="charge_connect_sound"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/charge_connect_sound" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="low_battery_sound"
+            android:summaryOff="@string/summaryOff"
+            android:summaryOn="@string/summaryOn"
+            android:title="@string/low_battery_sound" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="PopUp and Others" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Ongoing Notification" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="powersave_ongoing"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="PowerSaving Notification" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="battery_full_notification"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="@string/battery_full_notification" />
+
+    <SwitchPreference
+        android:key="low_warning"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Low Battery Notifications" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="PopUp" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="volume_warning_toggle"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Volume Warning w Headphones" />
+
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/volume_panel_timeout_entries"
+        android:entryValues="@array/volume_panel_timeout_values"
+        android:key="volume_panel_timeout"
+        android:summary="%s"
+        android:title="@string/vol_panel" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="disable_data_warn"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Data Warning PopUp" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Others" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="wake_home"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Home Button Wake Screen" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="allow_all_rotation"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Allow All Rotations" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Reboot Phone to update changes! ⇡⇡" />
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="FullScreen" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/immersive_entries"
+        android:entryValues="@array/immersive_values"
+        android:key="policy_control"
+        android:summary="%s"
+        android:title="Immersive Mode [Fullscreen]" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="@string/charge_effects" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:dialogTitle="@string/charge_effects"
+        android:entries="@array/charge_effect_entries"
+        android:entryValues="@array/charge_effect_values"
+        android:key="festival_charging_effect"
+        android:title="@string/charge_effects" />
+
+    <PreferenceCategory
+        android:layout="@layout/sub_category"
+        android:title="Ambient Display" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="doze_enabled"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Ambient Display" />
+
+    <com.martillero.romcontrol.prefs.SeekBarPreference
+        android:defaultValue="10000"
+        android:dependency="doze_enabled"
+        android:key="ambient_timeout"
+        android:max="10000"
+        android:title="Ambient Display Screen Time" />
+
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="Navigation Bar" />
+    <SwitchPreference
+        android:key="show_navbar"
+        android:summaryOff="@string/summaryOff"
+        android:summaryOn="@string/summaryOn"
+        android:title="Show Navigation Bar" />
+    <PreferenceCategory
+        android:layout="@layout/restart_category"
+        android:title="⇡⇡ ¡Reboot Phone to update changes! ⇡⇡" />
+
+    <SwitchPreference
+        android:defaultValue="0"
+        android:key="navbar_swipe_to_sleep"
+        android:summary="Enable/disable swipe to lock"
+        android:title="Swipe To sleep" />
+
+    <com.martillero.romcontrol.prefs.FilePreference
+        android:key="modcfg_permanent_noti"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="Notif Permanent switch" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-14606047"
+        android:key="pulldown_text"
+        android:summary="Choose text color"
+        android:title="Notification Text Title and body" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-1"
+        android:key="pulldown_text_1"
+        android:summary="Set panel color"
+        android:title="Pulldown Text Summary" />
+
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="-14318119"
+        android:key="pulldown_text_2"
+        android:summary="Choose text color"
+        android:title="Pulldown Text Inbox Text" />
+    <com.martillero.romcontrol.prefs.ColorPickerPreference
+        alphaSlider="true"
+        hexValue="true"
+        android:defaultValue="1293831800"
+        android:key="pulldown_text_3"
+        android:summary="Choose text color"
+        android:title="Pulldown Text msg Counter" />
+
+
+</PreferenceScreen>
