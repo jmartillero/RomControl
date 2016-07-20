@@ -17,16 +17,20 @@ package com.martillero.romcontrol;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,38 +40,51 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.software.shell.fab.ActionButton;
 import com.stericson.RootShell.exceptions.RootDeniedException;
 import com.stericson.RootShell.execution.Command;
 import com.stericson.RootTools.RootTools;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class MainViewActivity extends AppCompatActivity
         implements NavigationDrawerCallbacks, View.OnClickListener {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
-    private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Toolbar mToolbar;
+    File sddir = new File(Environment.getExternalStorageDirectory().getPath() + "/RomControl");
+    File bkpdir = new File(sddir + "/backup");
     int[] ids;
     ActionButton[] rebootFabs;
     ActionButton reboot, hotboot, recovery, bl, ui;
     View overlay;
     AssetManager am;
     HandleScripts hs;
+    /**
+     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
+     */
+    private NavigationDrawerFragment mNavigationDrawerFragment;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                        .setFontAttrId(R.attr.fontPath)
+                        .build()
+        );
+
         /*Calling theme selector class to set theme upon start activity*/
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
@@ -79,7 +96,6 @@ public class MainViewActivity extends AppCompatActivity
         // populate the navigation drawer
 
     }
-
     //Creates a list of NavItem objects to retrieve elements for the Navigation Drawer list of choices
     public List<NavItem> getMenu() {
         List<com.martillero.romcontrol.NavItem> items = new ArrayList<>();
@@ -96,12 +112,17 @@ public class MainViewActivity extends AppCompatActivity
         String[] mTitles = getResources().getStringArray(R.array.nav_drawer_items);
         int[] mIcons = {R.drawable.ic_ui_mods,
                 R.drawable.ic_dropdown_panel,
-                R.drawable.ic_general_framework,
+                R.drawable.ic_styles,
                 R.drawable.ic_lockscreen,
-                R.drawable.ic_phone_mods,
-                R.drawable.ic_advanced,
+                R.drawable.ic_power_menu,
                 R.drawable.ic_apps,
+                R.drawable.ic_phone_mods,
+                R.drawable.ic_custom_keys,
+                R.drawable.ic_advanced,
+                R.drawable.ic_general_framework,
                 R.drawable.ic_settings,
+                R.drawable.ic_backup,
+                R.drawable.rc,
                 R.drawable.ic_about,};
 
         for (int i = 0; i < mTitles.length && i < mIcons.length; i++) {
@@ -112,6 +133,11 @@ public class MainViewActivity extends AppCompatActivity
         }
 
         return items;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -128,24 +154,39 @@ public class MainViewActivity extends AppCompatActivity
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new DropDownFragment()).commitAllowingStateLoss();
                 break;
             case 2:
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new FrameworksGeneralFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new SystemUIStyle()).commitAllowingStateLoss();
                 break;
             case 3:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new LockscreenFragment()).commitAllowingStateLoss();
                 break;
             case 4:
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PhonePrefsFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PowerMenuFragment()).commitAllowingStateLoss();
                 break;
             case 5:
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AdvancedFragment()).commitAllowingStateLoss();
-                break;
-            case 6:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AppLinksFragment()).commitAllowingStateLoss();
                 break;
+            case 6:
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PhonePrefsFragment()).commitAllowingStateLoss();
+                break;
             case 7:
-                showThemeChooserDialog();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new CustomKeysFragment()).commitAllowingStateLoss();
                 break;
             case 8:
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AdvancedFragment()).commitAllowingStateLoss();
+                break;
+            case 9:
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new FrameworksGeneralFragment()).commitAllowingStateLoss();
+                break;
+            case 10:
+                showThemeChooserDialog();
+                break;
+            case 11:
+                showBackupDialog();
+                break;
+            case 12:
+                showChangelogDialog();
+                break;
+            case 13:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AboutFragment()).commitAllowingStateLoss();
                 break;
 
@@ -153,6 +194,162 @@ public class MainViewActivity extends AppCompatActivity
 
     }
 
+    private void showChangelogDialog() {
+        ChangeLog cl = new ChangeLog(this);
+        {
+            cl.getFullLogDialog().show();
+        }
+
+
+    }
+
+    private void showBackupDialog() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.backup_items));
+        b.setTitle(getString(R.string.backup_dialog_title))
+                .setIconAttribute(R.attr.backup)
+                .setSingleChoiceItems((ListAdapter) adapter, PreferenceManager.getDefaultSharedPreferences(this).getInt("backup", 0), new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int position) {
+                        //based on position we do something
+                        if (position == 0) {
+                            dialog.dismiss();
+                            //close dialog and open a new one
+                            AlertDialog.Builder confirm = new AlertDialog.Builder(MainViewActivity.this);
+                            confirm.setMessage(R.string.confirm_backup)
+                                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+
+                                                @Override
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    dialog.dismiss();
+                                                    AlertDialog.Builder restore = new AlertDialog.Builder(MainViewActivity.this);
+                                                    restore.setMessage(R.string.restore_next_boot)
+                                                            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+
+                                                                        @Override
+                                                                        public void onClick(DialogInterface dialog, int which) {
+                                                                            backupPreferences();
+                                                                            //if user say ok to restore on next boot we create an empty file
+                                                                            //if is present the receiver will prompt the restore confirm on next boot up
+                                                                            File file = new File(bkpdir + "/auto_restore.txt");
+                                                                            try {
+                                                                                file.createNewFile();
+                                                                            } catch (IOException e) {
+                                                                                e.printStackTrace();
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                            )
+                                                            .setNeutralButton(R.string.later, new DialogInterface.OnClickListener() {
+
+                                                                        @Override
+                                                                        public void onClick(DialogInterface dialog, int which) {
+                                                                            backupPreferences();
+                                                                            //if file for auto_restore is present we delete it
+                                                                            File file = new File(bkpdir + "/auto_restore.txt");
+                                                                            if (file.exists()) {
+                                                                                file.delete();
+                                                                            }
+                                                                        }
+                                                                    }
+                                                            )
+                                                            .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                                                                @Override
+                                                                public void onClick(DialogInterface dialog, int which) {
+                                                                    dialog.dismiss();
+
+                                                                }
+                                                            });
+                                                    AlertDialog d = restore.create();
+                                                    d.show();
+                                                    d.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+                                                }
+                                            }
+
+                                    )
+                                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            dialog.dismiss();
+
+                                        }
+                                    });
+                            AlertDialog d = confirm.create();
+                            d.show();
+                            d.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+                        } else if (position == 1) {
+                            dialog.dismiss();
+                            RestorePreferences rp = new RestorePreferences(MainViewActivity.this);
+                            //this is the call for constructor
+                            rp.showConfirmDialog();
+                        }
+                    }
+                })
+
+        ;
+        AlertDialog d = b.create();
+        d.show();
+        d.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+
+    }
+
+    private void backupPreferences() {
+        //we go into the shared_prefs folder and we read the files name's
+        File prefdir = new File("/data/data/com.martillero.romcontrol/shared_prefs");
+        File filesdir = new File("/data/data/com.martillero.romcontrol/files/FilePrefs");
+        if (bkpdir.listFiles() != null) {
+            for (File deleteBkp : bkpdir.listFiles()) {
+                deleteBkp.delete();
+
+            }
+        }
+        for (File f : prefdir.listFiles()) {
+            if (f.isFile()) {
+                String name = f.getName();
+                //if file is defult pref we don't backup as it doesn't go in the bd
+                if (!name.equals("com.martillero.romcontrol_preferences.xml")) {
+                    //we remove the xml suffix from filename and we assign it in the loop to the shared prefs
+                    //this way we can use the getAll method of shared prefs for all the existing files in the folder
+                    name = name.replace(".xml", "");
+                    SharedPreferences pref = getSharedPreferences(name, MODE_PRIVATE);
+                    //now we write to the backup file
+                    Map<String, ?> allEntries = pref.getAll();
+                    for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
+                        try (
+                                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(bkpdir + "/prefs.txt", true)))) {
+                            out.println(entry.getKey() + ": " + entry.getValue().toString());
+
+                        } catch (IOException e) {
+
+                        }
+                    }
+                }
+            }
+        }
+        if (filesdir.exists()) {
+            for (File files : filesdir.listFiles()) {
+                if (files.isFile()) {
+                    String name = files.getName();
+                    if (!name.contains("com.martillero")) {
+                        File filebackup = new File(bkpdir + "/" + name);
+                        try {
+                            filebackup.createNewFile();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+        finish();
+        this.overridePendingTransition(0, R.animator.fadeout);
+        startActivity(new Intent(this, MainViewActivity.class));
+        this.overridePendingTransition(R.animator.fadein, 0);
+    }
 
     @Override
     public void onBackPressed() {
@@ -274,6 +471,7 @@ public class MainViewActivity extends AppCompatActivity
         AlertDialog.Builder b = new AlertDialog.Builder(this);
         Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.theme_items));
         b.setTitle(getString(R.string.theme_chooser_dialog_title))
+                .setIconAttribute(R.attr.theming)
                 .setSingleChoiceItems((ListAdapter) adapter, PreferenceManager.getDefaultSharedPreferences(this).getInt("theme_prefs", 0), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -312,8 +510,50 @@ public class MainViewActivity extends AppCompatActivity
 
     }
 
+    //To use this method when the user interacts with the app, you need to remove the outcommenting from all the previous methods and a from the onPostExecute of async task CheckSu
+    private void remountSystem(String mount) throws Exception {
+        String system = "/system";
+        String mounted = RootTools.getMountedAs(system);
+        boolean isMountedRW = mounted.equals("rw") ? true : false;
+        if (isMountedRW && mount.equals("ro")) {
+            RootTools.remount(system, "ro");
+        } else if (!isMountedRW && mount.equals("rw")) {
+            RootTools.remount(system, "rw");
+        }
+    }
+//
+//    @Override
+//    protected void onRestart() {
+//        super.onRestart();
+//        try {
+//            remountSystem("rw");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        try {
+//            remountSystem("ro");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        try {
+//            remountSystem("ro");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     //Asynchronous class to ask for su rights at the beginning of the activity. If the root rights have been denied or the device is not rooted, the app will not run.
-    public class CheckSu extends AsyncTask<String, Integer, Boolean> {
+    public class CheckSu extends AsyncTask<Void, Void, Boolean> {
         ProgressDialog mProgressDialog;
 
         @Override
@@ -322,13 +562,25 @@ public class MainViewActivity extends AppCompatActivity
             mProgressDialog = new ProgressDialog(MainViewActivity.this);
             mProgressDialog.setMessage(getString(R.string.gaining_root));
             mProgressDialog.show();
+            mProgressDialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
+
         }
 
         @Override
-        protected Boolean doInBackground(String... params) {
+        protected Boolean doInBackground(Void... voids) {
             //Accessing the ability of the device to get root and the ability of app to achieve su privileges.
             if (RootTools.isAccessGiven()) {
-                return null;
+                if (!sddir.exists()) {
+                    Log.d("sddir", "sddir doesn't exists");
+                    sddir.mkdir();
+                    bkpdir.mkdir();
+                }
+                am = getAssets();
+                //Calling the helper class HandleScripts to copy scripts to the files folder and chmod 755.
+                //Scripts can be then accessed and executed using script#scriptname key for PreferenceScreen in PreferenceFragments
+                hs = new HandleScripts(MainViewActivity.this);
+                hs.copyAssetFolder();
+                return true;
 
             } else {
                 return false;
@@ -340,7 +592,7 @@ public class MainViewActivity extends AppCompatActivity
             mProgressDialog.dismiss();
             //If the device is not rooted or su has been denied the app will not run.
             //A dialog will be shown announcing that with a single button, upon clicking which the activity will finish.
-            if (!RootTools.isAccessGiven()) {
+            if (!result) {
                 //If no su access detected, throw and alert dialog with single button that will finish the activity
                 AlertDialog.Builder mNoSuBuilder = new AlertDialog.Builder(MainViewActivity.this);
                 mNoSuBuilder.setTitle(R.string.missing_su_title);
@@ -368,61 +620,16 @@ public class MainViewActivity extends AppCompatActivity
                 // Set up the drawer. Look in NavigationDrawerFragment for more details
                 mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar, MainViewActivity.this);
                 initRebootMenu();
-                am = getAssets();
-                //Calling the helper class HandleScripts to copy scripts to the files folder and chmod 755.
-                //Scripts can be then accessed and executed using script#scriptname key for PreferenceScreen in PreferenceFragments
-                hs = new HandleScripts(MainViewActivity.this);
-                hs.copyAssetFolder();
-                try {
-                    remountSystem("rw");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+
+//                try {
+//                    remountSystem("rw");
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
             }
 
 
         }
     }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        try {
-            remountSystem("rw");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        try {
-            remountSystem("ro");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        try {
-            remountSystem("ro");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-  }
-
-    //To use this method when the user interacts with the app, you need to remove the outcommenting from all the previous methods and a from the onPostExecute of async task CheckSu
-    private void remountSystem(String mount) throws Exception {
-        String system = "/system";
-        String mounted = RootTools.getMountedAs(system);
-        boolean isMountedRW = mounted.equals("rw") ? true : false;
-        if (isMountedRW && mount.equals("ro")) {
-            RootTools.remount(system, "ro");
-        } else if(!isMountedRW && mount.equals("rw")){
-            RootTools.remount(system, "rw");
-        }
-    }
 }
+

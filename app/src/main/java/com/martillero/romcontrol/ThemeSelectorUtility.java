@@ -2,7 +2,6 @@ package com.martillero.romcontrol;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
@@ -43,6 +42,15 @@ public class ThemeSelectorUtility {
                 break;
             case 1:
                 activity.setTheme(R.style.AppThemeLight);
+                break;
+            case 2:
+                activity.setTheme(R.style.CustomTheme);
+                break;
+            case 3:
+                activity.setTheme(R.style.FourTheme);
+                break;
+            case 4:
+                activity.setTheme(R.style.FifthTheme);
                 break;
 
         }

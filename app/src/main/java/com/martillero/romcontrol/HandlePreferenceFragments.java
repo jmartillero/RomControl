@@ -25,20 +25,23 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.Toast;
 
-import com.stericson.RootShell.exceptions.RootDeniedException;
-import com.stericson.RootShell.execution.Command;
-import com.stericson.RootTools.RootTools;
 import com.martillero.romcontrol.prefs.ColorPickerPreference;
 import com.martillero.romcontrol.prefs.FilePreference;
+import com.martillero.romcontrol.prefs.ImmersivePreference;
 import com.martillero.romcontrol.prefs.IntentDialogPreference;
 import com.martillero.romcontrol.prefs.MyEditTextPreference;
 import com.martillero.romcontrol.prefs.MyListPreference;
 import com.martillero.romcontrol.prefs.SeekBarPreference;
+import com.martillero.romcontrol.prefs.ThumbnailListPreference;
+import com.stericson.RootShell.exceptions.RootDeniedException;
+import com.stericson.RootShell.execution.Command;
+import com.stericson.RootTools.RootTools;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Stack;
 import java.util.concurrent.TimeoutException;
 
@@ -253,6 +256,15 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                     MyEditTextPreference et = (MyEditTextPreference) pf.findPreference(key);
                     et.setSummary(t);
                 }
+
+                if (p instanceof ThumbnailListPreference || p instanceof ImmersivePreference) {
+                    if (actualString == null) {
+                        Settings.System.putString(cr, key, prefString);
+                    } else if (!prefString.equals(t)) {
+                        ed.putString(key, t).apply();
+                    }
+                }
+
             }
         }
 
@@ -274,14 +286,71 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
             case "SwitchPreference":
                 SwitchPreference s = (SwitchPreference) pf.findPreference(key);
                 s.setChecked(sharedPreferences.getBoolean(key, true));
+                if (key.equals("need_dark_font")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("modcfg_rotation_enable")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (s.getKey().equals("MyCustomText_toggle")) {
+                    setDependencies(s.isChecked());
+                }
+                if (s.getKey().equals("CPUSPYENABLE")) {
+                    setDependencies2(s.isChecked());
+                }
                 break;
             case "CheckBoxPreference":
                 CheckBoxPreference cbp = (CheckBoxPreference) pf.findPreference(key);
                 cbp.setChecked(sharedPreferences.getBoolean(key, true));
+                if (key.equals("lockscreen_rotate")) {
+                    appRebootRequired("com.android.systemui");
+                }
                 break;
             case "MyListPreference":
                 MyListPreference l = (MyListPreference) pf.findPreference(key);
                 String lValue = sharedPreferences.getString(key, "");
+                if (key.equals("notification_panel_active_app_list")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("notification_shortcutsssss")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
                 //Any action on the rouge list preference will be performed only if there was no exception
                 if (!isOutOfBounds) {
                     CharSequence[] mEntries = l.getEntries();
@@ -303,11 +372,36 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                 ColorPickerPreference cpp = (ColorPickerPreference) pf.findPreference(key);
                 cpp.setColor(sharedPreferences.getInt(key, Color.WHITE));
                 break;
+            case "ImmersivePreference":
+                ImmersivePreference ip = (ImmersivePreference) pf.findPreference(key);
+                String ipValue = sharedPreferences.getString(key, "");
+                if (Objects.equals(ipValue, "immersive.full") || Objects.equals(ipValue, "")) {
+                    ip.setSummary("Off");
+                } else {
+                    ip.setSummary("on - check selection");
+                }
+
         }
         /*Calling main method to handle updating database based on preference changes*/
         if (p instanceof FilePreference) {
         } else {
             updateDatabase(key, p, sharedPreferences);
+        }
+    }
+
+    private void setDependencies(boolean isMasterChecked) {
+        String[] keysArray = {"CPUSPYENABLE"};
+        for (int i = 0; i < keysArray.length; i++) {
+            SwitchPreference dependantSwitch = (SwitchPreference) pf.findPreference(keysArray[i]);
+            dependantSwitch.setChecked(!isMasterChecked);
+        }
+    }
+
+    private void setDependencies2(boolean isMasterChecked) {
+        String[] keysArray = {"MyCustomText_toggle"};
+        for (int i = 0; i < keysArray.length; i++) {
+            SwitchPreference dependantSwitch = (SwitchPreference) pf.findPreference(keysArray[i]);
+            dependantSwitch.setChecked(!isMasterChecked);
         }
     }
 
@@ -320,7 +414,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
             isEnabled = sp.getBoolean(key, true);
             dbInt = (isEnabled) ? 1 : 0;
             Settings.System.putInt(cr, key, dbInt);
-        } else if (o instanceof MyEditTextPreference || o instanceof MyListPreference || o instanceof IntentDialogPreference) {
+        } else if (o instanceof MyEditTextPreference || o instanceof MyListPreference || o instanceof IntentDialogPreference || o instanceof ThumbnailListPreference || o instanceof ImmersivePreference) {
             value = sp.getString(key, "");
             Settings.System.putString(cr, key, value);
         } else if (o instanceof ColorPickerPreference) {
@@ -378,6 +472,18 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
         * and we attempt to build intent.
         * We know from the allGroups() method that if the intent is not valid, the preference will not show at all.
         * Nevertheless. as precaution we catch an exception and show a toast that the app is not installed.*/
+            if (preference.getKey() != null && preference.getKey().contains("carrier")) {
+                appRebootRequired("reboot");
+            }
+            if (preference.getKey() != null && preference.getKey().contains("keysymbol")) {
+                appRebootRequired("reboot");
+            }
+            if (preference.getKey() != null && preference.getKey().contains("call_in_log")) {
+                appRebootRequired("reboot");
+            }
+            if (preference.getKey() != null && preference.getKey().contains("emoji")) {
+                appRebootRequired("reboot");
+            }
         } else if (preference.getKey() != null && preference.getKey().contains(".")) {
             String cls = preference.getKey();
             String pkg = cls.substring(0, cls.lastIndexOf("."));

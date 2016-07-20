@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="true" android:color="@color/myAccentColorLight" />
-    <item android:state_selected="false" android:color = "@color/myTextPrimaryColorLight"/>
-
-    <item android:color="@color/myTextPrimaryColor" />
+    <item android:color="@color/myTextPrimaryColorLight" android:state_pressed="true" />
+    <item android:color="@color/myDrawerBackground" android:state_selected="true" />
+    <item android:color="@color/myTextPrimaryColorLight" android:state_selected="false" />
 </selector>

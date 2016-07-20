@@ -22,7 +22,6 @@
 
         <item name="colorPrimary">@color/myPrimaryColor</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
-
         <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColor</item>
@@ -35,9 +34,19 @@
 
     </style>
 
-    <style name="MyTheme" parent="android:Theme.DeviceDefault.Light">
-        <item name="android:colorControlNormal">#fff</item>
-        <!--<item name="android:colorControlActivated">@color/myAccentColor</item>-->
+    <style name="CustomTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/myPrimaryCustom</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDarkCustom</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryCustom</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseCustom</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+
+        <item name="android:windowContentTransitions">true</item>
 
     </style>
 
@@ -51,4 +60,5 @@
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
+
 </resources>

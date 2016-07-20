@@ -14,7 +14,6 @@ package com.martillero.romcontrol;
         You should have received a copy of the GNU General Public License
         along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
@@ -25,7 +24,7 @@ public class FrameworksGeneralFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        hpf = new HandlePreferenceFragments(getActivity(), this, "frameworks_general_prefs");
+        hpf = new HandlePreferenceFragments(getActivity(), this, "general");
     }
 
     @Override

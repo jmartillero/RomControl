@@ -6,19 +6,40 @@
     <declare-styleable name="NavDrawerIcon">
         <attr name="tint" format="reference|color" />
     </declare-styleable>
+    <declare-styleable name="ThumbnailListPreference">
+        <attr name="drawableArray" format="reference" />
+        <attr name="entryList" format="reference" />
+        <attr name="entryValuesList" format="reference" />
+        <attr name="entryDefault" format="string" />
+    </declare-styleable>
     <!--<declare-styleable name=""-->
 <attr name="nav_drawer_bg_color" format="color"/>
     <attr name="myAccentColor" format="color"/>
-<attr name="nav_item_color_selector" format="reference|color"/>
-    <attr name="nav_drawer_header" format="reference"/>
+    <attr name="mynewColor" format="color" />
+    <attr name="drawertextcolor" format="color" />
+    <attr name="navitextcolor" format="color" />
+    <attr name="circle_anim_color" format="color" />
+    <attr name="row_attr" format="reference|color" />
+    <attr name="nav_item_color_selector" format="reference|color" />
     <attr name="my_logo" format="reference"/>
     <attr name="launcher" format="reference"/>
-    <attr name="emoticon" format="reference"/>
     <attr name="wifi" format="reference"/>
     <attr name="audio" format="reference"/>
     <attr name="sounds" format="reference"/>
     <attr name="keys" format="reference"/>
-    <attr name="marti" format="reference"/>
     <attr name="build" format="reference"/>
-    <attr name="signal" format="reference"/>
+    <attr name="corner2" format="reference" />
+    <attr name="backup" format="reference" />
+    <attr name="ic_backup" format="reference" />
+    <attr name="theming" format="reference" />
+    <attr name="att" format="reference" />
+    <attr name="stock" format="reference" />
+    <attr name="tmo" format="reference" />
+    <attr name="spr" format="reference" />
+    <attr name="symbol" format="reference" />
+    <attr name="nosymbol" format="reference" />
+    <attr name="logo_overlay" format="color" />
+    <attr name="soundtoggleon" format="reference" />
+    <attr name="soundtoggleoff" format="reference" />
+    <attr name="dialog" format="reference" />
 </resources>

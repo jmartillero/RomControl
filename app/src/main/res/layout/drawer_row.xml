@@ -1,23 +1,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="48dp"
     android:layout_width="match_parent"
-    >
+    android:layout_height="42.5dp"
+    android:layout_marginTop="-3.2dp"
+    android:background="?attr/row_attr"
+    android:backgroundTint="?attr/mynewColor">
     <com.martillero.romcontrol.NavDrawerIcon
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        android:src="@mipmap/ic_launcher"
         android:id="@+id/nav_item_icon"
-        android:layout_margin="24dp"
-        android:tint = "?attr/nav_item_color_selector"
+        android:layout_width="19.5dp"
+        android:layout_height="19.5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:src="@mipmap/ic_launcher"
+        android:tint="?attr/nav_item_color_selector"
         android:tintMode="src_atop"/>
 
-    <TextView android:id="@+id/item_name" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?android:attr/selectableItemBackground" android:drawablePadding="16dp"
-        android:textSize="14sp" android:gravity="center_vertical"
-android:backgroundTint="?attr/nav_item_color_selector"
-        android:text="Nav Item"/>
-</LinearLayout>
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="-27dp"
+        android:src="@drawable/marti_animation"
+        android:tint="?attr/nav_drawer_bg_color"
+        android:tintMode="src_atop" />
 
+    <TextView
+        android:id="@+id/item_name"
+        fontPath="fonts/JANA.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:background="#00000000"
+        android:backgroundTint="?attr/nav_item_color_selector"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:textAllCaps="false"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+</LinearLayout>

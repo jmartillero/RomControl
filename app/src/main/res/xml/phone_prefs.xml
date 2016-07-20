@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="General Phone and InCall UI Mods" />
-        <SwitchPreference
-            android:title="Increasing Ringtone"
-            android:key="db_inc_volume_disable"
-            android:defaultValue="false"
-            android:summaryOn="On"
-            android:summaryOff="Off" />
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="@string/phone_title" />
 
-        <PreferenceScreen
-            android:title="Stock Incall UI"
-            android:key="script#stockincallui"
-            android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_call_record_in"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/incom_record" />
 
-        <PreferenceScreen
-            android:title="FullScreen S5 Incall UI (No FC in Incoming Calls)"
-            android:key="script#fullincallui"
-            android:summary="Rom control will install it and reboot automatically\n[Phone will reboot after press this option]" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_call_record_out"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/outcom_record" />
 
-    <PreferenceCategory android:title="For S5 InCall UI Fullscreen Only" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="killprocess_inc_volume_disable"
+        android:summaryOff="Off"
+        android:summaryOn="On"
+        android:title="@string/incr_ring" />
 
-        <SwitchPreference
-            android:title="Remove Last spoke"
-            android:key="last_spoke"
-            android:defaultValue="true"
-            android:summaryOn="Last Spoke is currently Off"
-            android:summaryOff="Last Spoke is currently On" />
+    <com.martillero.romcontrol.prefs.MyListPreference
+        android:entries="@array/CallDelayName"
+        android:entryValues="@array/CallDelayValue"
+        android:key="killprocess_call_delay"
+        android:summary="@string/call_delay_summ"
+        android:title="@string/call_delay" />
 
-        <SwitchPreference
-            android:title="Remove Last message"
-            android:key="last_message"
-            android:defaultValue="true"
-            android:summaryOn="Last Message is currently Off"
-            android:summaryOff="Last Message is currently On" />
+    <PreferenceCategory
+        android:layout="@layout/preferences_category"
+        android:title="InCall UI Mods" />
+    <PreferenceScreen
+        android:key="script#fullscreen_Off"
+        android:summary="@string/app_reboot_required_message3"
+        android:title="Stock Incall UI" />
+
+    <PreferenceScreen
+        android:key="script#fullscreen_On"
+        android:summary="@string/app_reboot_required_message3"
+        android:title="FullScreen Incall UI" />
+
 </PreferenceScreen>

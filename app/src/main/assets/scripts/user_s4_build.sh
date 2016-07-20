@@ -1,5 +1,7 @@
 #!/system/bin/sh
 
-cp -p /system/romcontrol/files/buildprop/user_s4_build.prop /system/build.prop
+busybox mount -o remount,rw /system
+
+sed -i 's/ro.product.name=zeroflte/ro.product.name=ja3g/g' /system/build.prop
 
 reboot

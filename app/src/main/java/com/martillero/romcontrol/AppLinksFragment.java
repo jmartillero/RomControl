@@ -1,6 +1,5 @@
 package com.martillero.romcontrol;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
@@ -11,7 +10,7 @@ public class AppLinksFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        hpf = new HandlePreferenceFragments(getActivity(), this, "app_links_prefs");
+        hpf = new HandlePreferenceFragments(getActivity(), this, "otras_modificaciones");
     }
 
     @Override

@@ -2,7 +2,10 @@ package com.martillero.romcontrol;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.widget.Toast;
+
+import com.stericson.RootShell.exceptions.RootDeniedException;
+import com.stericson.RootShell.execution.Command;
+import com.stericson.RootTools.RootTools;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.concurrent.TimeoutException;
 
 /*      Created by Roberto Mariani and Anna Berkovitch, 19/06/15
         This program is free software: you can redistribute it and/or modify
@@ -97,13 +101,19 @@ public class HandleScripts {
         scriptsInFiles = parent.list();
         //If the file was just copied, we make it executable
         if(isCopied){
-           for(int file=0; file<scriptsInFiles.length; file++){
-               try {
-                   Runtime.getRuntime().exec("chmod 755 " + scriptFilesDirPath + File.separator + scriptsInFiles[file]);
-               } catch (IOException e) {
-                   e.printStackTrace();
-               }
-           }
+            for (int file = 0; file < scriptsInFiles.length; file++) {
+                try {
+                    Command c = new Command(0, "chmod 755 " + scriptFilesDirPath + File.separator + scriptsInFiles[file]);
+                    RootTools.getShell(false).add(c);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (RootDeniedException e) {
+                    e.printStackTrace();
+                } catch (TimeoutException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return isCopied;
     }

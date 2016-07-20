@@ -9,48 +9,183 @@
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="myAccentColor">@color/myAccentColor</item>
-        <item name="nav_drawer_bg_color">#ff000000</item>
-        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
         <item name="nav_item_color_selector">@color/text_color_selector</item>
         <item name="colorPrimary">@color/myPrimaryColor</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
         <item name="colorAccent">@color/myAccentColor</item>
         <item name="my_logo">@drawable/logo_dark</item>
         <item name="launcher">@drawable/launcher_dark</item>
-        <item name="emoticon">@drawable/emoticon_dark</item>
         <item name="wifi">@drawable/wifi_dark</item>
         <item name="audio">@drawable/audio_dark</item>
         <item name="sounds">@drawable/sound_dark</item>
         <item name="keys">@drawable/keys_dark</item>
-        <item name="marti">@drawable/marti_dark</item>
         <item name="build">@drawable/build_dark</item>
-        <item name="signal">@drawable/signal_dark</item>
+        <item name="ic_backup">@drawable/ic_backup</item>
+        <item name="corner2">@drawable/cornerbackground2</item>
+        <item name="drawertextcolor">#ff000000</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="row_attr">@drawable/row_pic</item>
+        <item name="mynewColor">@color/myPrimaryColor</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="backup">@drawable/backup_dark</item>
+        <item name="symbol">@drawable/symbol_light</item>
+        <item name="nosymbol">@drawable/nosymbol_light</item>
+        <item name="theming">@drawable/theme</item>
+        <item name="logo_overlay">@color/myPrimaryColor</item>
+        <item name="soundtoggleon">@drawable/ic_sound_on</item>
+        <item name="soundtoggleoff">@drawable/ic_sound_off</item>
+        <item name="dialog">@drawable/dialog_full_holo_light</item>
     </style>
     <style name="AppThemeLight" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:windowBackground">@color/myInverseColorLight</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="nav_drawer_bg_color">#ffffffff</item>
-        <item name="nav_drawer_header">@drawable/header_image_light</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColorLight</item>
         <item name="nav_item_color_selector">@color/text_color_selector_light</item>
         <item name="colorPrimary">@color/myPrimaryColorLight</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColorLight</item>
         <item name="colorAccent">@color/myAccentColorLight</item>
-        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="my_logo">@drawable/logo_light</item>
         <item name="launcher">@drawable/launcher_light</item>
-        <item name="emoticon">@drawable/emoticon_light</item>
         <item name="wifi">@drawable/wifi_light</item>
         <item name="audio">@drawable/audio_light</item>
         <item name="sounds">@drawable/sound_light</item>
         <item name="keys">@drawable/keys_light</item>
-        <item name="marti">@drawable/marti_light</item>
         <item name="build">@drawable/build_light</item>
-        <item name="signal">@drawable/signal_light</item>
+        <item name="corner2">@drawable/cornerbackground_light2</item>
+        <item name="drawertextcolor">#adffffff</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="row_attr">@drawable/row_pic</item>
+        <item name="mynewColor">@color/myPrimaryColorLight</item>
+        <item name="circle_anim_color">#ffffff</item>
+        <item name="backup">@drawable/backup_light</item>
+        <item name="ic_backup">@drawable/ic_backup_dark</item>
+        <item name="symbol">@drawable/symbol</item>
+        <item name="nosymbol">@drawable/nosymbol</item>
+        <item name="theming">@drawable/theme_dark</item>
+        <item name="logo_overlay">@color/myPrimaryColorLight</item>
+        <item name="soundtoggleon">@drawable/ic_sound_on_light</item>
+        <item name="soundtoggleoff">@drawable/ic_sound_off_light</item>
+        <item name="dialog">@drawable/dialog_full_holo_dark</item>
     </style>
+
+    <style name="CustomTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:windowBackground">@color/myInverseColorLight</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColorLight</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_light</item>
+        <item name="colorPrimary">@color/myPrimaryCustom</item>
+        <item name="colorPrimaryDark">@color/myPrimaryCustom</item>
+        <item name="colorAccent">@color/myPrimaryCustom</item>
+        <item name="my_logo">@drawable/logo_light</item>
+        <item name="launcher">@drawable/launcher_light</item>
+        <item name="wifi">@drawable/wifi_light</item>
+        <item name="audio">@drawable/audio_light</item>
+        <item name="sounds">@drawable/sound_light</item>
+        <item name="keys">@drawable/keys_light</item>
+        <item name="build">@drawable/build_light</item>
+        <item name="corner2">@drawable/cornerbackground2_custom</item>
+        <item name="drawertextcolor">#adffffff</item>
+        <item name="navitextcolor">#ff000000</item>
+        <item name="row_attr">@drawable/row_pic</item>
+        <item name="mynewColor">@color/myPrimaryCustom</item>
+        <item name="circle_anim_color">#ffffff</item>
+        <item name="backup">@drawable/backup_light</item>
+        <item name="ic_backup">@drawable/ic_backup_dark</item>
+        <item name="symbol">@drawable/symbol</item>
+        <item name="nosymbol">@drawable/nosymbol</item>
+        <item name="theming">@drawable/theme_dark</item>
+        <item name="soundtoggleon">@drawable/ic_sound_on_light</item>
+        <item name="soundtoggleoff">@drawable/ic_sound_off_light</item>
+        <item name="logo_overlay">@color/myPrimaryCustom</item>
+        <item name="dialog">@drawable/dialog_full_holo_dark</item>
+    </style>
+
+    <style name="FourTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor4</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:windowBackground">@color/myInverseColorLight</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColorLight</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_light</item>
+        <item name="colorPrimary">@color/myPrimaryColor4</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDarkColor4</item>
+        <item name="colorAccent">@color/myAccentColor4</item>
+        <item name="my_logo">@drawable/logo_light</item>
+        <item name="launcher">@drawable/launcher_light</item>
+        <item name="wifi">@drawable/wifi_light</item>
+        <item name="audio">@drawable/audio_light</item>
+        <item name="sounds">@drawable/sound_light</item>
+        <item name="keys">@drawable/keys_light</item>
+        <item name="build">@drawable/build_light</item>
+        <item name="corner2">@drawable/cornerbackground2_4</item>
+        <item name="drawertextcolor">#adffffff</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="row_attr">@drawable/row_pic</item>
+        <item name="mynewColor">@color/myPrimaryColor4</item>
+        <item name="circle_anim_color">#ffffff</item>
+        <item name="backup">@drawable/backup_light</item>
+        <item name="ic_backup">@drawable/ic_backup_dark</item>
+        <item name="symbol">@drawable/symbol</item>
+        <item name="nosymbol">@drawable/nosymbol</item>
+        <item name="theming">@drawable/theme_dark</item>
+        <item name="logo_overlay">@color/myAccentColor4</item>
+        <item name="soundtoggleon">@drawable/ic_sound_on_light</item>
+        <item name="soundtoggleoff">@drawable/ic_sound_off_light</item>
+        <item name="dialog">@drawable/dialog_full_holo_dark</item>
+    </style>
+
+    <style name="FifthTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor5</item>
+        <item name="android:windowBackground">@color/myInverseColor5</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="myAccentColor">@color/myAccentColor5</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor5</item>
+        <item name="nav_item_color_selector">@color/text_color_selector</item>
+        <item name="colorPrimary">@color/myAccentColor5</item>
+        <item name="colorPrimaryDark">@color/myAccentColor5</item>
+        <item name="colorAccent">@color/myAccentColor5</item>
+        <item name="my_logo">@drawable/logo_dark</item>
+        <item name="launcher">@drawable/launcher_dark</item>
+        <item name="wifi">@drawable/wifi_dark</item>
+        <item name="audio">@drawable/audio_dark</item>
+        <item name="sounds">@drawable/sound_dark</item>
+        <item name="keys">@drawable/keys_dark</item>
+        <item name="build">@drawable/build_dark</item>
+        <item name="ic_backup">@drawable/ic_backup</item>
+        <item name="corner2">@drawable/cornerbackground2_5</item>
+        <item name="drawertextcolor">#ff000000</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="row_attr">@drawable/row_pic</item>
+        <item name="mynewColor">@color/myPrimaryColor5</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="backup">@drawable/backup_dark</item>
+        <item name="symbol">@drawable/symbol_light</item>
+        <item name="nosymbol">@drawable/nosymbol_light</item>
+        <item name="theming">@drawable/theme</item>
+        <item name="logo_overlay">@color/myAccentColor5</item>
+        <item name="soundtoggleon">@drawable/ic_sound_on</item>
+        <item name="soundtoggleoff">@drawable/ic_sound_off</item>
+        <item name="dialog">@drawable/dialog_full_holo_light</item>
+    </style>
+
     <style name="Base.TextAppearance.AppCompat" parent="@android:style/TextAppearance.Material" />
     <style name="Base.TextAppearance.AppCompat.Body1" parent="@android:style/TextAppearance.Material.Body1" />
     <style name="Base.TextAppearance.AppCompat.Body2" parent="@android:style/TextAppearance.Material.Body2" />
@@ -87,7 +222,8 @@
     <style name="Base.TextAppearance.AppCompat.Widget.Switch" parent="@android:style/TextAppearance.Material.Button" />
     <style name="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="@android:style/TextAppearance.Material.Widget.TextView.SpinnerItem" />
     <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" />
-    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" />
+
+    <style name="Base.TextAppearance.Widget.AppCompat.Toolbar.Title" parent="@style/ToolBarStyle" />
     <style name="Base.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat" />
     <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V21.Theme.AppCompat.Dialog" />
     <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light" />
@@ -130,9 +266,6 @@
     <style name="Base.Widget.AppCompat.RatingBar" parent="@android:style/Widget.Material.RatingBar" />
     <style name="Base.Widget.AppCompat.Spinner" parent="@android:style/Widget.Material.Spinner" />
     <style name="Base.Widget.AppCompat.Spinner.DropDown.ActionBar" parent="@android:style/Widget.Material.Spinner">
-        <item name="spinnerMode">dropdown</item>
-        <item name="popupPromptView">@layout/abc_simple_dropdown_hint</item>
-        <item name="disableChildrenWhenDisabled">true</item>
     </style>
     <style name="Base.Widget.AppCompat.Spinner.Underlined" parent="@android:style/Widget.Material.Spinner.Underlined" />
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="@android:style/Widget.Material.TextView.SpinnerItem" />
@@ -172,10 +305,14 @@
         <item name="android:colorAccent">?colorAccent</item>
     </style>
     <style name="ToolBarStyle">
-        <item name="android:textColorPrimary">#ffffffff</item>
+        <item name="android:textColorPrimary">#ff000000</item>
         <item name="android:elevation">@dimen/toolbar_elevation</item>
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
-        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+        <item name="fontPath">fonts/WallowXenon.ttf</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">?attr/navitextcolor</item>
+        <item name="android:textAllCaps">true</item>
     </style>
     <style name="Base.V21.Theme.AppCompat" parent="@style/Base.V7.Theme.AppCompat">
         <item name="android:colorControlNormal">?colorControlNormal</item>
@@ -270,4 +407,11 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="nav_drawer_bg_color">#00000000</item>
     </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
 </resources>

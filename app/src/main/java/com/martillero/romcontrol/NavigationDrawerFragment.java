@@ -4,40 +4,20 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.Paint;
-import android.graphics.PixelFormat;
-import android.graphics.PorterDuff;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.graphics.Shader;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -153,12 +133,17 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         String[] mTitles = getResources().getStringArray(R.array.nav_drawer_items);
         int[] mIcons = {R.drawable.ic_ui_mods,
                 R.drawable.ic_dropdown_panel,
-                R.drawable.ic_general_framework,
+                R.drawable.ic_styles,
                 R.drawable.ic_lockscreen,
-                R.drawable.ic_phone_mods,
-                R.drawable.ic_advanced,
+                R.drawable.ic_power_menu,
                 R.drawable.ic_apps,
+                R.drawable.ic_phone_mods,
+                R.drawable.ic_custom_keys,
+                R.drawable.ic_advanced,
+                R.drawable.ic_general_framework,
                 R.drawable.ic_settings,
+                R.drawable.ic_backup,
+                R.drawable.rc,
                 R.drawable.ic_about,};
         for (int i=0; i<mTitles.length && i<mIcons.length; i++){
             NavItem current = new NavItem();
